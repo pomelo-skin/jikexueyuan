@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>课程表</title>
+    <style type="text/css">
+        body{
+            font-family: arial, 宋体, '微软雅黑', serif, sans-serif;
+            font-size: 12px;
+            text-align: center;
+        }
+        table{
+            /*width:50%;*/
+            border-radius: 10px;
+            border: 3px solid #a2c3d2;
+            padding: 5px;
+        }
+        caption{
+            font-size: 1.8em;
+            font-weight: bold;
+            padding: 12px 0;
+        }
+        th{
+           line-height: 30px;
+            /*border-radius: 10px;*/
+            margin:0;
+        }
+        td{
+            padding: 5px 10px;
+
+        }
+        .am1,.am3,.pm1{
+            background-color: #dde6d0;
+        }
+        .am2,.am4,.pm2{
+            background-color: #eef2e9;
+        }
+       .h{
+           background-color: #f2ba8b;
+       }
+       .head{
+           background-color: #9aba59;
+           padding: 6px;
+           border-radius: 5px;
+       }
+        .rest{
+            background-color: #c0df91;
+            color:red;
+            border: 1px dashed #fff;
+            /*border-radius: 10px;*/
+        }
+    </style>
+</head>
+<body>
+<table border="2px solid #ccc" align="center" width="500px">
+    <caption>课程表</caption>
+    <!--设计表头-->
+    <thead>
+    <tr class="h">
+        <td colspan="2" rowspan="2">时间</td>
+        <td colspan="5" class="f">上课</td>
+        <td colspan="2" class="f">休息</td>
+    </tr>
+    <tr class="head">
+        <th>星期一</th>
+        <th>星期二</th>
+        <th>星期三</th>
+        <th>星期四</th>
+        <th>星期五</th>
+        <th>星期六</th>
+        <th>星期日</th>
+    </tr>
+    </thead>
+    <!--课程主体部分-->
+    <tbody>
+    <tr class="am1">
+        <td rowspan="4" class="h">上午</td>
+        <td class="h"> 1</td>
+        <td>数学</td>
+        <td>数学</td>
+        <td>数学</td>
+        <td>数学</td>
+        <td>数学</td>
+        <td rowspan="4" class="rest">休息</td>
+        <td rowspan="4" class="rest">休息</td>
+    </tr>
+    <tr class="am2">
+        <td class="h">2</td>
+        <td>语文</td>
+        <td>数学</td>
+        <td>数学</td>
+        <td>数学</td>
+        <td>数学</td>
+
+    </tr>
+    <tr class="am3">
+        <td class="h">3</td>
+        <td>英语</td>
+        <td>数学</td>
+        <td>数学</td>
+        <td>数学</td>
+        <td>数学</td>
+
+    </tr>
+    <tr class="am4">
+        <td class="h">4</td>
+        <td>历史</td>
+        <td>数学</td>
+        <td>数学</td>
+        <td>数学</td>
+        <td>数学</td>
+
+    </tr>
+    <tr class="pm1">
+        <td rowspan="2" class="h">下午</td>
+        <td class="h">1</td>
+        <td>体育</td>
+        <td>数学</td>
+        <td>数学</td>
+        <td>数学</td>
+        <td>数学</td>
+        <td rowspan="2" class="rest">休息</td>
+        <td rowspan="2" class="rest">休息</td>
+    </tr>
+    <tr class="pm2">
+        <td class="h">2</td>
+        <td>体育</td>
+        <td>数学</td>
+        <td>数学</td>
+        <td>数学</td>
+        <td>数学</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
