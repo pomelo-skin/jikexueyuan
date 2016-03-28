@@ -1,0 +1,225 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-family: arial, 宋体, '微软雅黑', serif, sans-serif;
+    font-size: 12px;
+    height: 100%;
+}
+
+.wrapper {
+    height: 100%;
+    /*设置最小高度和宽度*/
+    min-width: 810px;
+    min-height: 600px;
+    position: relative;
+    _width: expression(documentElement.clientWidth < 810 ? "810px" : "auto");/*IE6设置最小宽度及高度*/
+    _height: expression(documentElement.clientHeight < 600 ? "600px" : "auto");
+}
+
+#header {
+    height: 100%;
+    display: block;
+    text-align: center;
+    position: relative;
+}
+
+.menu {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 19px 0 5px 0;
+    padding-right: 90px;
+    height: 24px;
+    /*overflow: hidden;*/
+}
+
+.menu li {
+    display: inline-block;
+    float: left;
+}
+
+.menu a.mnav {
+    float: left;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.menu a.lb, a.pf {
+    float: left;
+    /*background-color: #9aba59;*/
+    margin-left: 20px;
+}
+
+.menu .more {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    width: 60px;
+    height: 23px;
+    color: #fff;
+    text-decoration: none;
+    background-color: #3387fe;
+    float: left;
+    margin: 0 2px 0 19px;
+    border-bottom: 1px solid #38f;
+}
+
+a.lb, a.pf, a.mnav, a.more {
+    color: #333;
+    font-size: 13px;
+    line-height: 24px;
+}
+
+#s_form {
+    font-size: 0;
+    position: relative;
+    top: 38.2%;
+}
+
+#logo, .bdform {
+    position: relative;
+    top: -191px;
+}
+
+#s_form .bdform .bdform {
+    margin: 22px auto 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 641px;
+    text-align: left;
+    background-color: orange;
+}
+
+.s-input {
+    width: 539px;
+    height: 34px;
+    display: inline-block;
+    border: 1px solid #b6b6b6;
+    border-right: none;
+    padding-left: 6px;
+    font-size: 16px;
+    float: left;
+
+}
+
+#s_form .bdform .s-btn {
+    background: #3384fe;
+    width: 100px;
+    height: 36px;
+    color: #fff;
+    border-style: none;
+    padding: 0;
+    margin-left: -4px;
+    display: inline-block;
+    font-size: 15px;
+    float: left;
+}
+
+/*脚部*/
+#footer {
+    height: 100px;
+    position: absolute;
+    bottom: 44px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+}
+
+#footer .ftConW {
+    width: 720px;
+    margin: 0 auto;
+}
+
+p.about {
+    margin: 16px 0 5px;
+}
+
+p.about a {
+    margin: 0 10px;
+}
+
+.cp, .cp > a {
+    color: #666;
+}
+
+/*下拉菜单样式实现---开始*/
+.bdpfmenu {
+    display: none;
+    width: 70px;
+    position: absolute;
+    top: 30px;
+    margin-top: -1px;
+    border: 1px solid #d1d1d1;
+    -webkit-box-shadow: 1px 1px 5px #d1d1d1;
+    -moz-box-shadow: 1px 1px 5px #d1d1d1;
+    box-shadow: 1px 1px 5px #d1d1d1;
+    +margin-left:-50px; /*IE6/7/8/9*/
+}
+
+.selectMenu li a {
+    display: block;
+    width: 70px;
+    line-height: 26px;
+    text-decoration: none;
+    color: #333;
+    text-align: center;
+}
+
+.bdpfmenu a:hover {
+    display: block;
+    line-height: 26px;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    background-color: #3384fe;
+}
+
+/*下拉菜单小箭头样式--开始*/
+.bdnuarrow {
+    width: 20px;
+    height: 20px;
+    font-size: 0;
+    display: block;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    margin-left: -5px;
+    +margin-left:-13px;/*IE6/7/8/9*/
+}
+
+.bdnuarrow em, .bdnuarrow i {
+    width: 0;
+    height: 0;
+    font-size: 0;
+    display: block;
+    /*定义position使em标签和i标签重合*/
+    position: absolute;
+    border: 5px solid transparent;
+    border-style: dashed dashed solid dashed; /*IE6下使其他3条边达到透明效果*/
+}
+
+/*通过将em标签向上平移1px*/
+.bdnuarrow em {
+    border-bottom-color: #d8d8d8;
+    top: -1px;
+}
+
+.bdnuarrow i {
+    border-bottom-color: #fff;
+    top: 0;
+}
+
+/*下拉菜单小箭头样式--结束*/

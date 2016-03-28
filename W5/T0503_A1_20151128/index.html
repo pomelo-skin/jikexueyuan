@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>任务三</title>
+</head>
+<body>
+<!--找到数组["a","x","b","d","m","a","k","m","p","j","a"]出现最多的字母并给出个数和每一个所在的顺序-->
+<script type="text/javascript">
+    var arr1 = ["a", "x", "b", "d", "m", "a", "k", "m", "p", "j", "a"];
+    var count = {};
+    /*记录每个字符出现的次数*/
+    var pos = {};
+    /*记录每个字符的索引*/
+    //    第一步：遍历数组,记录每个字符出现的次数及其索引
+         /*将数组中所有字符写入count和pos对象属性*/
+    for (var i = 0; i < arr1.length; i++) {
+        if (!count[arr1[i]]) {
+            count[arr1[i]] = 1;
+            pos[arr1[i]] = i;
+        } else {
+            count[arr1[i]]++;
+            pos[arr1[i]] += "," + i;
+        }
+    }
+    console.log(count);
+    console.log(pos);
+    //    第二步：找出次数最多的，输出
+    var max = 0;
+    //    遍历count对象每个属性的值与max作比较
+    for (var i in count) {
+        if (count[i] > max) {
+            max = count[i];
+            console.log("出现最多的字母是:" + i + "；其个数为:" + count[i] + "；每一个所在的顺序为:" + pos[i]);
+            document.write("数组[\"a\",\"x\",\"b\",\"d\",\"m\",\"a\",\"k\",\"m\",\"p\",\"j\",\"a\"]中出现最多的字母是:" + i + "；其个数为:" + count[i] + "；每一个所在的顺序为:" + pos[i]);
+        }
+    }
+</script>
+
+</body>
+</html>

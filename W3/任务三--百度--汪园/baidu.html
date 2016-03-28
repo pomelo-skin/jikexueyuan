@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>百度一下</title>
+    <link href="/favicon.ico" rel="shortcut icon" type="images/x-icon">
+    <link href="styles/reset.css" rel="stylesheet"/>
+    <link href="styles/mystyle.css" rel="stylesheet"/>
+    <script type="text/javascript">
+        window.onload = function () {
+            var pf = document.getElementById("li-pf");
+            var bdpfmenu = document.getElementById("bdpfmenu");
+            pf.onmouseover = function () {
+                bdpfmenu.style.display = "block";
+            }
+            pf.onmouseout = function () {
+                bdpfmenu.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="wrapper">
+    <div id="header">
+        <!--顶部导航-->
+        <!--top-->
+        <div id="top">
+            <ul class="menu">
+                <li><a href="http://news.baidu.com" class="mnav " target="_blank">新闻</a></li>
+                <li><a href="http://www.hao123.com" class="mnav " target="_blank">hao123</a></li>
+                <li><a href="http://map.baidu.com" class="mnav " target="_blank">地图</a></li>
+                <li><a href="http://v.baidu.com" class="mnav " target="_blank">视频</a></li>
+                <li><a href="http://tieba.baidu.com" class="mnav " target="_blank">贴吧</a></li>
+                <li><a href="https://passport.baidu.com/v2/?login&amp;tpl=mn&amp;u=http%3A%2F%2Fwww.baidu.com%2"
+                       class="lb">登录</a>
+                </li>
+                <li class="li-pf" id="li-pf">
+                    <a href="http://www.baidu.com/gaoji/preferences.html" name="tj_settingicon" class="pf">设置</a>
+
+                    <div class="bdpfmenu" id="bdpfmenu">
+                        <!--下拉菜单小箭头-->
+                        <div class="bdnuarrow">
+                            <em></em>
+                            <i></i>
+                        </div>
+                        <!--下拉菜单-->
+                        <ul class="selectMenu">
+                            <li><a class="setpref" href="javascript:;">搜索设置</a></li>
+                            <li><a href="//www.baidu.com/gaoji/advanced.html" target="_blank">高级搜索</a></li>
+                            <li><a href="javascript:;">关闭预测</a></li>
+                            <li><a href="javascript:;">搜索历史</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="http://www.baidu.com/more/" class="more">更多产品</a></li>
+            </ul>
+        </div>
+        <!--end top-->
+        <div id="s_form">
+            <div id="logo">
+                <img src="images/bd_logo2.png" alt="百度Logo"/>
+            </div>
+            <form action="http://www.baidu.com" method="post" class="bdform">
+                <label for="submit"><input type="text" class="s-input" autofocus=""/></label>
+                <input type="submit" value="百度一下" class="s-btn" id="submit"/>
+            </form>
+            <div class="blank"></div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="ftConW">
+            <p class="about">
+                <a id="setf" href="//www.baidu.com/cache/sethelp/help.html" target="_blank">把百度设为主页</a>
+                <a href="http://home.baidu.com" class="ft">关于百度</a>
+                <a href="http://ir.baidu.com" class="ft">About&nbsp;&nbsp;Baidu</a>
+            </p>
+
+            <p class="cp">&copy;2015 Baidu <a href="#">使用百度必读</a>&nbsp;<a href="#"> 意见反馈</a> 030173号<img
+                    src="images/gs.gif"/></p>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

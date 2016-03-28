@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device,initial-scale=1.0">
+    <title>百度一下</title>
+    <link href="styles/pc/reset.css" rel="stylesheet" media="screen and (min-width:768px)"/>
+    <link href="styles/pc/mystyle.css" rel="stylesheet" media="screen and (min-width:768px)"/>
+    <link href="styles/mobile/wapbaiduStyle.css" rel="stylesheet" media="screen and (max-width:768px)">
+    <script type="text/javascript">
+        window.onload = function () {
+            var pf = document.getElementById("pf");
+            var bdpfmenu = document.getElementById("bdpfmenu");
+            pf.onmouseover = function () {
+                bdpfmenu.style.display = "block";
+            }
+            pf.onmouseout = function () {
+                bdpfmenu.style.display = "none";
+            }
+        }
+    </script>
+    <style rel="stylesheet" type="text/css">
+        @media screen and (min-width: 768px) {
+            #mobile-baidu {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            #pc-baidu {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper" id="pc-baidu">
+    <div id="header">
+        <!--顶部导航-->
+        <!--top-->
+        <div id="top">
+            <ul class="menu">
+                <li><a href="http://news.baidu.com" class="mnav " target="_blank">新闻</a></li>
+                <li><a href="http://www.hao123.com" class="mnav " target="_blank">hao123</a></li>
+                <li><a href="http://map.baidu.com" class="mnav " target="_blank">地图</a></li>
+                <li><a href="http://v.baidu.com" class="mnav " target="_blank">视频</a></li>
+                <li><a href="http://tieba.baidu.com" class="mnav " target="_blank">贴吧</a></li>
+                <li><a href="https://passport.baidu.com/v2/?login&amp;tpl=mn&amp;u=http%3A%2F%2Fwww.baidu.com%2"
+                       class="lb">登录</a>
+                </li>
+                <li class="li-pf" id="pf">
+                    <a href="http://www.baidu.com/gaoji/preferences.html" name="tj_settingicon" class="pf">设置</a>
+
+                    <div class="bdpfmenu" id="bdpfmenu">
+                        <!--下拉菜单小箭头-->
+                        <div class="bdnuarrow">
+                            <em></em>
+                            <i></i>
+                        </div>
+                        <!--下拉菜单-->
+                        <ul class="selectMenu">
+                            <li><a class="setpref" href="javascript:;">搜索设置</a></li>
+                            <li><a href="//www.baidu.com/gaoji/advanced.html" target="_blank">高级搜索</a></li>
+                            <li><a href="javascript:;">关闭预测</a></li>
+                            <li><a href="javascript:;">搜索历史</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="http://www.baidu.com/more/" class="more">更多产品</a></li>
+            </ul>
+        </div>
+        <!--end top-->
+        <div id="s_form">
+            <div class="s_form_wr">
+                <div id="logo">
+                    <img src="images/bd_logo2.png" alt="百度Logo"/>
+                </div>
+                <form action="http://www.baidu.com" method="post" class="bdform">
+                <span class="s_ipt_wr">
+                    <label for="submit"><input type="text" class="s-input "/></label>
+                </span>
+                <span class="s_btn_wr">
+                    <input type="submit" value="百度一下" class="s-btn" id="submit"/>
+                </span>
+                </form>
+                <div class="blank"></div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="ftConW">
+            <p class="about">
+                <a id="setf" href="//www.baidu.com/cache/sethelp/help.html" target="_blank">把百度设为主页</a>
+                <a href="http://home.baidu.com" class="ft">关于百度</a>
+                <a href="http://ir.baidu.com" class="ft">About&nbsp;&nbsp;Baidu</a>
+            </p>
+
+            <p class="cp">&copy;2015 Baidu <a href="#">使用百度必读</a>&nbsp;<a href="#"> 意见反馈</a> 030173号<img
+                    src="images/gs.gif"/></p>
+        </div>
+    </div>
+
+</div>
+<div class="page" id="mobile-baidu">
+    <!--天气-->
+    <div id="weather">
+        <div class="weather-outline">
+            <div class="wea-num">11°</div>
+            <div class="icon-wea-default"></div>
+            <div class="wea-detail">
+                <p>郑州</p>
+
+                <p>空气&nbsp;178</p>
+            </div>
+            <i class="icon-down"></i>
+        </div>
+    </div>
+
+    <!--头部-->
+    <div class="header">
+        <div class="user-info-wrap">
+            <a class="icon-login" id="login"
+               href="http://wappass.baidu.com/passport/?login&amp;tpl=wimn&amp;ssid=0&amp;from=844b&amp;uid=&amp;pu=sz%401320_2001%2Cta%40iphone_1_7.0_3_537&amp;bd_page_type=1&amp;tn=&amp;regtype=1&amp;u=http://m.baidu.com">
+            </a>
+        </div>
+        <!--百度logo-->
+        <div class="logo-img">
+            <img src="images/plus_logo.png" alt="logo"/>
+        </div>
+        <form action="http://www.baidu.com" method="post" id="header-form" class="se-form">
+            <div class="con-wrapper"><!--输入框包裹层-->
+                <input type="text" name="ipt-search" class="se-input" id="se-input-kw">
+
+                <div class="se-inner">
+                    <div class="callIconWrap">
+                        <div class="baiduapp-icon"></div>
+                    </div>
+                    <input type="submit" value="百度一下" class="se-btn">
+                </div>
+            </div>
+        </form>
+        <div id="navs">
+            <a href="#">
+                <i class="navs-news"></i>
+                新闻
+            </a>
+            <a href="#">
+                <i class="navs-novel"></i>
+                小说
+            </a>
+            <a href="#">
+                <i class="navs-video"></i>
+                视频
+            </a>
+            <a href="#">
+                <i class="navs-life"></i>
+                生活+
+            </a>
+            <a href="#">
+                <i class="navs-map"></i>
+                地图
+            </a>
+            <a href="#">
+                <i class="navs-more"></i>
+                更多
+            </a>
+        </div>
+        <!--navs-->
+    </div>
+    <!--header-->
+
+    <div id="plus-card">
+        <div class="plus" id="plus-navs">
+            <div class="plus-title">
+                <div class="normal-title">
+                    <i class="icon-nav"></i>
+
+                    <h2>常用网址</h2>
+                    <a href="#" class="plus-edit">
+                        <i class="icon-edit"></i>
+                        <ul style="display: none"><!--更多--下拉菜单-->
+                            <li>编辑</li>
+                            <li>置顶</li>
+                            <li>关闭</li>
+                        </ul>
+                    </a>
+                </div>
+            </div>
+            <div class="plus-content" id="nav-list">
+                <a href="#" class="new"><span>贴吧</span></a>
+                <a href="#" class="hao123"><span>hao123</span></a>
+                <a href="#"><span>地图</span></a>
+                <a href="#"><span>百度VIP</span></a>
+                <a href="#"><span>图片</span></a>
+                <a href="#"><span>音乐</span></a>
+                <a href="#"><span>糯米</span></a>
+                <a href="#">
+                    <span>更多</span>
+                </a>
+            </div>
+        </div>
+        <div class="plus" id="hotword">
+            <div class="plus-title">
+                <div class="normal-title">
+                    <i class="icon-news"></i>
+
+                    <h2>实时热点</h2>
+                    <span class="refresh">换一批
+                    <i class="icon-refresh"></i>
+                    </span>
+                    <a href="#" class="plus-edit">
+                        <i class="icon-edit"></i>
+                        <ul style="display: none"><!--更多--下拉菜单-->
+                            <li>置顶</li>
+                            <li>关闭</li>
+                        </ul>
+                    </a>
+                </div>
+            </div>
+            <ul class="plus-content" id="hotword-list">
+                <li>
+                    <a href="//m.baidu.com/from=844b/pu=sz%401320_2001/s?word=%E5%A4%A7%E5%8F%94%E5%B8%A6%E6%B2%99%E5%8F%91%E5%9D%90%E8%BD%BB%E8%BD%A8&amp;sa=iph_37&amp;ms=1"
+                       class="hot">广州现外籍男乞丐</a></li>
+                <li>
+                    <a href="//m.baidu.com/from=844b/pu=sz%401320_2001/s?word=%E5%A4%A7%E5%8F%94%E5%B8%A6%E6%B2%99%E5%8F%91%E5%9D%90%E8%BD%BB%E8%BD%A8&amp;sa=iph_36&amp;ms=1"
+                       class="hot">范玮琪晒娃再遭骂</a></li>
+                <li>
+                    <a href="//m.baidu.com/from=844b/pu=sz%401320_2001/s?word=%E5%A4%A7%E5%8F%94%E5%B8%A6%E6%B2%99%E5%8F%91%E5%9D%90%E8%BD%BB%E8%BD%A8&amp;sa=iph_38&amp;ms=1">世界最性感小矮人</a>
+                </li>
+                <li>
+                    <a href="//m.baidu.com/from=844b/pu=sz%401320_2001/s?word=%E5%A4%A7%E5%8F%94%E5%B8%A6%E6%B2%99%E5%8F%91%E5%9D%90%E8%BD%BB%E8%BD%A8&amp;sa=iph_39&amp;ms=1">李宗伟再胜林丹</a>
+                </li>
+                <li>
+                    <a href="//m.baidu.com/from=844b/pu=sz%401320_2001/s?word=%E5%A4%A7%E5%8F%94%E5%B8%A6%E6%B2%99%E5%8F%91%E5%9D%90%E8%BD%BB%E8%BD%A8&amp;sa=iph_40&amp;ms=1"
+                       class="hot">男子靠手机挡子弹</a></li>
+                <li>
+                    <a href="//m.baidu.com/from=844b/pu=sz%401320_2001/s?word=%E5%A4%A7%E5%8F%94%E5%B8%A6%E6%B2%99%E5%8F%91%E5%9D%90%E8%BD%BB%E8%BD%A8&amp;sa=iph_41&amp;ms=1">变性男子生下女儿</a>
+                </li>
+            </ul>
+            <div class="hot-search">
+                <a href="#">百度风云榜<i class="icon-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

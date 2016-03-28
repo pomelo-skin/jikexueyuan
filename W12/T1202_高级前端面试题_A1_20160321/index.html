@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>初级前端工程师面试题</title>
+    <link rel="stylesheet" href="css/mystyle.css" type="text/css">
+</head>
+<body>
+<div class="page" id="page">
+    <h1>前端开发面试题</h1>
+    <div class="html">
+        <h2>HTML</h2>
+        <ul class="subject">
+            <li>
+                <p>Doctype作用？标准模式与兼容模式各有什么区别?</p>
+                <pre>
+                    <code>
+（1）、&lt;!DOCTYPE&gt;声明位于位于HTML文档中的第一行，处于 &lt;html&gt;标签之前。告知浏览器的解析器用什么文档标准解析这个文档。DOCTYPE不存在或格式不正确会导致文档以兼容模式呈现。
+
+（2）、标准模式的排版 和JS运作模式都是以该浏览器支持的最高标准运行。在兼容模式中，页面以宽松的向后兼容的方式显示,模拟老式浏览器的行为以防止站点无法工作。
+                    </code>
+                </pre>
+            </li>
+            <li>
+                <p>HTML5 为什么只需要写 &lt;!DOCTYPE HTML&gt;？</p>
+                <pre>
+                    <code>
+HTML5 不基于 SGML，因此不需要对DTD进行引用，但是需要doctype来规范浏览器的行为（让浏览器按照它们应该的方式来运行）；
+
+而HTML4.01基于SGML,所以需要对DTD进行引用，才能告知浏览器文档所使用的文档类型
+                    </code>
+                </pre>
+            </li>
+            <li>
+                <p>行内元素有哪些？块级元素有哪些？ 空(void)元素有那些？</p>
+                <pre>
+                    <code>
+首先：CSS规范规定，每个元素都有display属性，确定该元素的类型，每个元素都有默认的display值，如div的display默认值为“block”，则为“块级”元素；span默认display属性值为“inline”，是“行内”元素。
+
+（1）行内元素有：a b span img input select strong（强调的语气）
+（2）块级元素有：div ul ol li dl dt dd h1 h2 h3 h4…p
+
+（3）常见的空元素：
+         &lt;br&gt; &lt;hr&gt; &lt;img&gt; &lt;input&gt; &lt;link&gt; &lt;meta&gt;
+     鲜为人知的是：
+         &lt;area&gt; &lt;base&gt; &lt;col&gt; &lt;command&gt; &lt;embed&gt; &lt;keygen&gt; &lt;param&gt; &lt;source&gt; &lt;source&gt; &lt;wbr&gt;
+                    </code>
+                </pre>
+            </li>
+            <li>
+                <p>页面导入样式时，使用link和@import有什么区别？</p>
+                <pre>
+                    <code>
+（1）link属于XHTML标签，除了加载CSS外，还能用于定义RSS, 定义rel连接属性等作用；而@import是CSS提供的，只能用于加载CSS;
+
+（2）页面被加载时，link会同时被加载，而@import引用的CSS会等到页面被加载完再加载;
+
+（3）import是CSS2.1 提出的，只在IE5以上才能被识别，而link是XHTML标签，无兼容问题;
+                    </code>
+                </pre>
+            </li>
+            <li>
+                <p>介绍一下你对浏览器内核的理解？</p>
+                <pre>
+                    <code>
+主要分成两部分：渲染引擎(layout engineer或Rendering Engine)和JS引擎。
+
+渲染引擎：负责取得网页的内容（HTML、XML、图像等等）、整理讯息（例如加入CSS等），以及计算网页的显示方式，然后会输出至显示器或打印机。浏览器的内核的不同对于网页的语法解释会有不同，所以渲染的效果也不相同。所有网页浏览器、电子邮件客户端以及其它需要编辑、显示网络内容的应用程序都需要内核。
+
+JS引擎则：解析和执行javascript来实现网页的动态效果。
+
+最开始渲染引擎和JS引擎并没有区分的很明确，后来JS引擎越来越独立，内核就倾向于只指渲染引擎。
+                    </code>
+                </pre>
+            </li>
+            <li>
+                <p>常见的浏览器内核有哪些？</p>
+                <pre>
+                    <code>
+Trident内核：IE,MaxThon,TT,The World,360,搜狗浏览器等。[又称MSHTML]
+Gecko内核：Netscape6及以上版本，FF,MozillaSuite/SeaMonkey等
+Presto内核：Opera7及以上。      [Opera内核原为：Presto，现为：Blink;]
+Webkit内核：Safari,Chrome等。   [ Chrome的：Blink（WebKit的分支）]
+                    </code>
+                </pre>
+            </li>
+            <li>
+                <p>html5有哪些新特性、移除了那些元素？如何处理HTML5新标签的浏览器兼容问题？如何区分 HTML 和 HTML5？</p>
+                <pre>
+                    <code>
+ * HTML5 现在已经不是 SGML 的子集，主要是关于图像，位置，存储，多任务等功能的增加。
+         绘画 canvas;
+         用于媒介回放的 video 和 audio 元素;
+         本地离线存储 localStorage 长期存储数据，浏览器关闭后数据不丢失;
+         sessionStorage 的数据在浏览器关闭后自动删除;
+         语意化更好的内容元素，比如 article、footer、header、nav、section;
+         表单控件，calendar、date、time、email、url、search;
+         新的技术webworker, websockt, Geolocation;
+
+   移除的元素：
+
+       纯表现的元素：basefont，big，center，font, s，strike，tt，u;
+       对可用性产生负面影响的元素：frame，frameset，noframes；
+
+ * 支持HTML5新标签：
+
+       IE8/IE7/IE6支持通过document.createElement方法产生的标签，
+       可以利用这一特性让这些浏览器支持HTML5新标签，
+       浏览器支持新标签后，还需要添加标签默认的样式。
+
+       当然最好的方式是直接使用成熟的框架、使用最多的是html5shim框架
+       &lt;!--[if lt IE 9]&gt;
+       &lt;script&gt; src="http://html5shim.googlecode.com/svn/trunk/html5.js"&lt;/script&gt;
+       &lt;![endif]--&gt;
+
+ * 如何区分： DOCTYPE声明\新增的结构元素\功能元素
+                    </code>
+                </pre>
+            </li>
+            <li>
+                <p>简述一下你对HTML语义化的理解？</p>
+                <pre>
+                    <code>
+用正确的标签做正确的事情。
+html语义化让页面的内容结构化，结构更清晰，便于对浏览器、搜索引擎解析;
+及时在没有样式CCS情况下也以一种文档格式显示，并且是容易阅读的;
+搜索引擎的爬虫也依赖于HTML标记来确定上下文和各个关键字的权重，利于SEO;
+使阅读源代码的人对网站更容易将网站分块，便于阅读维护理解。
+                    </code>
+                </pre>
+            </li>
+            <li>
+                <p>HTML5的离线储存怎么使用，工作原理能不能解释一下？</p>
+                <pre>
+                    <code>
+在用户没有与因特网连接时，可以正常访问站点或应用，在用户与因特网连接时，更新用户机器上的缓存文件。
+原理：HTML5的离线存储是基于一个新建的.appcache文件的缓存机制(不是存储技术)，通过这个文件上的解析清单离线存储资源，这些资源就会像cookie一样被存储了下来。之后当网络在处于离线状态下时，浏览器会通过被离线存储的数据进行页面展示。
+
+
+如何使用：
+1、页面头部像下面一样加入一个manifest的属性；
+2、在cache.manifest文件的编写离线存储的资源；
+     CACHE MANIFEST
+     #v0.11
+     CACHE:
+     js/app.js
+     css/style.css
+     NETWORK:
+     resourse/logo.png
+     FALLBACK:
+     / /offline.html
+     3、在离线状态时，操作window.applicationCache进行需求实现。
+                    </code>
+                </pre>
+            </li>
+            <li>
+                <p>浏览器是怎么对HTML5的离线储存资源进行管理和加载的呢？</p>
+                <pre>
+                    <code>
+在线的情况下，浏览器发现html头部有manifest属性，它会请求manifest文件，如果是第一次访问app，那么浏览器就会根据manifest文件的内容下载相应的资源并且进行离线存储。如果已经访问过app并且资源已经离线存储了，那么浏览器就会使用离线的资源加载页面，然后浏览器会对比新的manifest文件与旧的manifest文件，如果文件没有发生改变，就不做任何操作，如果文件改变了，那么就会重新下载文件中的资源并进行离线存储。
+离线的情况下，浏览器就直接使用离线存储的资源。
+                    </code>
+                </pre>
+            </li>
+            <li>
+                <p>请描述一下 cookies，sessionStorage 和 localStorage 的区别？</p>
+                <pre>
+                    <code>
+cookie是网站为了标示用户身份而储存在用户本地终端（Client Side）上的数据（通常经过加密）。
+cookie数据始终在同源的http请求中携带（即使不需要），记会在浏览器和服务器间来回传递。
+sessionStorage和localStorage不会自动把数据发给服务器，仅在本地保存。
+
+
+存储大小：
+cookie数据大小不能超过4k。
+sessionStorage和localStorage 虽然也有存储大小的限制，但比cookie大得多，可以达到5M或更大。
+
+有期时间：
+    localStorage    存储持久数据，浏览器关闭后数据不丢失除非主动删除数据；
+    sessionStorage  数据在当前浏览器窗口关闭后自动删除。
+    cookie          设置的cookie过期时间之前一直有效，即使窗口或浏览器关闭
+                    </code>
+                </pre>
+            </li>
+            <li>
+                <p>iframe有那些缺点？</p>
+                <pre>
+                    <code>
+*iframe会阻塞主页面的Onload事件；
+*搜索引擎的检索程序无法解读这种页面，不利于SEO;
+
+*iframe和主页面共享连接池，而浏览器对相同域的连接有限制，所以会影响页面的并行加载。
+
+使用iframe之前需要考虑这两个缺点。如果需要使用iframe，最好是通过javascript
+动态给iframe添加src属性值，这样可以可以绕开以上两个问题。
+                    </code>
+                </pre>
+            </li>
+            <li>
+                <p>Label的作用是什么？是怎么用的？</p>
+                <pre>
+                    <code>
+label标签来定义表单控制间的关系,当用户选择该标签时，浏览器会自动将焦点转到和标签相关的表单控件上。
+
+&lt;label for="Name">Number:&lt;/label&gt; &lt;input type=“text“name="Name" id="Name"/&gt;
+
+&lt;label&gt;Date:&lt;input type="text" name="B" /&gt;&lt;/label&gt;
+                    </code>
+                </pre>
+            </li>
+            <li>
+                <p>HTML5的form如何关闭自动完成功能？</p>
+                <pre>
+                    <code>
+给不想要提示的 form 或下某个input 设置为 autocomplete=off。
+                    </code>
+                </pre>
+            </li>
+            <li>
+                <p>如何实现浏览器内多个标签页之间的通信? (阿里)</p>
+                <pre>
+                    <code>
+调用localstorge、cookies等本地存储方式
+                    </code>
+                </pre>
+            </li>
+            <li>
+                <p>webSocket如何兼容低浏览器？(阿里)</p>
+                <pre>
+                    <code>
+Adobe Flash Socket 、
+ActiveX HTMLFile (IE) 、
+基于 multipart 编码发送 XHR 、
+基于长轮询的 XHR
+                    </code>
+                </pre>
+            </li>
+            <li>
+                <p>页面可见性（Page Visibility）API 可以有哪些用途？</p>
+                <pre>
+                    <code>
+在页面被切换到其他后台进程的时候，自动暂停音乐或视频的播放；
+                    </code>
+                </pre>
+            </li>
+            <li>
+                <p>如何在页面上实现一个圆形的可点击区域？</p>
+                <pre>
+                    <code>
+ 1、map+area或者svg
+2、border-radius
+3、纯js实现 需要求一个点在不在圆上简单算法、获取鼠标坐标等等
+                    </code>
+                </pre>
+            </li>
+            <li>
+                <p>实现不使用 border 画出1px高的线，在不同浏览器的标准模式与怪异模式下都能保持一致的效果。</p>
+                <pre>
+                    <code>
+
+&lt;div style="height:1px;overflow:hidden;background:#ccc"&gt;&lt;/div&gt;
+                    </code>
+                </pre>
+            </li>
+            <li>
+                <p>网页验证码是干嘛的，是为了解决什么安全问题。</p>
+                <pre>
+                    <code>
+区分用户是计算机还是人的公共全自动程序。可以防止：恶意破解密码、刷票、论坛灌水；
+有效防止黑客对某一个特定注册用户用特定程序暴力破解方式进行不断的登陆尝试；
+                    </code>
+                </pre>
+            </li>
+        </ul>
+    </div>
+    <div class="CSS">
+        <h2>CSS</h2>
+        <ul class="subject">
+            <li>
+                <p>介绍一下CSS的盒子模型？</p>
+                <pre>
+                    <code>
+（1）有两种， IE 盒子模型、标准 W3C 盒子模型；IE的content部分包含了 border 和 pading;
+
+（2）盒模型： 内容(content)、填充(padding)、边界(margin)、 边框(border).
+                    </code>
+                </pre>
+            </li>
+            <li>
+                <p>CSS 选择符有哪些？哪些属性可以继承？优先级算法如何计算？ CSS3新增伪类有那些？</p>
+                <pre>
+                    <code>
+选择符：
+
+*   1.id选择器（ # myid）
+    2.类选择器（.myclassname）
+    3.标签选择器（div, h1, p）
+    4.相邻选择器（h1 + p）
+    5.子选择器（ul > li）
+    6.后代选择器（li a）
+    7.通配符选择器（ * ）
+    8.属性选择器（a[rel = "external"]）
+    9.伪类选择器（a: hover, li: nth - child）
+
+*   可继承的样式： font-size font-family color, UL LI DL DD DT;
+
+*   不可继承的样式：border padding margin width height ;
+
+*   优先级就近原则，同权重情况下样式定义最近者为准;
+
+*   载入样式以最后载入的定位为准;
+
+优先级为：
+
+   !important >  id > class > tag
+
+   important 比 内联优先级高
+
+CSS3新增伪类举例：
+
+p:first-of-type 选择属于其父元素的首个 &lt;p&gt; 元素的每个 &lt;p&gt; 元素。
+p:last-of-type  选择属于其父元素的最后 &lt;p&gt; 元素的每个 &lt;p&gt; 元素。
+p:only-of-type  选择属于其父元素唯一的 &lt;p&gt; 元素的每个 &lt;p&gt; 元素。
+p:only-child    选择属于其父元素的唯一子元素的每个 &lt;p&gt; 元素。
+p:nth-child(2)  选择属于其父元素的第二个子元素的每个 &lt;p&gt; 元素。
+:enabled,:disabled 控制表单控件的禁用状态。
+:checked        单选框或复选框被选中。
+                    </code>
+                </pre>
+            </li>
+            <li>
+                <p>CSS优先级算法如何计算？ * 优先级就近原则，同权重情况下样式定义最近者为准;</p>
+                <pre>
+                    <code>
+ *   载入样式以最后载入的定位为准;
+
+ 优先级为:
+!important >  id > class > tag
+important 比 内联优先级高
+                    </code>
+                </pre>
+            </li>
+            <li>
+                <p>如何居中div？如何居中一个浮动元素？</p>
+                <pre>
+                    <code>
+1.给div设置一个宽度，然后添加margin:0 auto属性
+div{
+width:200px;
+margin:0 auto;
+}
+2.居中一个浮动元素
+确定容器的宽高 宽500 高 300 的层，设置层的外边距
+.div {
+Width:500px ; height:300px;//高度可以不设
+Margin: -150px 0 0 -250px;
+position:relative;相对定位
+background-color:pink;//方便看效果
+left:50%;
+top:50%;
+}
+                    </code>
+                </pre>
+            </li>
+            <li>
+                <p>CSS3新增伪类有那些？</p>
+                <pre>
+                    <code>
+CSS3新增伪类举例：
+p:first-of-type 选择属于其父元素的首个 <p> 元素的每个 <p> 元素。
+p:last-of-type  选择属于其父元素的最后 <p> 元素的每个 <p> 元素。
+p:only-of-type  选择属于其父元素唯一的 <p> 元素的每个 <p> 元素。
+p:only-child    选择属于其父元素的唯一子元素的每个 <p> 元素。
+p:nth-child(2)  选择属于其父元素的第二个子元素的每个 <p> 元素。
+:enabled        :disabled 控制表单控件的禁用状态。
+:checked        单选框或复选框被选中。
+                    </code>
+                </pre>
+            </li>
+            <li>
+                <p>列出display的值，说明他们的作用。position的值， relative和absolute定位原点是？</p>
+                <pre>
+                    <code>
+  1.
+  block 象块类型元素一样显示。
+  none 缺省值。象行内元素类型一样显示。
+  inline-block 象行内元素一样显示，但其内容象块类型元素一样显示。
+  list-item 象块类型元素一样显示，并添加样式列表标记。
+
+  2.
+  *absolute
+        生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。
+
+  *fixed （老IE不支持）
+        生成绝对定位的元素，相对于浏览器窗口进行定位。
+
+  *relative
+        生成相对定位的元素，相对于其正常位置进行定位。
+
+  * static  默认值。没有定位，元素出现在正常的流中
+  *（忽略 top, bottom, left, right z-index 声明）。
+
+  * inherit 规定从父元素继承 position 属性的值。
+                    </code>
+                </pre>
+            </li>
+            <li>
+                <p>CSS3有哪些新特性？</p>
+                <pre>
+                    <code>
+CSS3实现圆角（border-radius:8px），阴影（box-shadow:10px），
+对文字加特效（text-shadow、），线性渐变（gradient），旋转（transform）
+transform:rotate(9deg) scale(0.85,0.90) translate(0px,-30px) skew(-9deg,0deg);//旋转,缩放,定位,倾斜
+增加了更多的CSS选择器  多背景 rgba     
+                    </code>
+                </pre>
+            </li>
+            <li>
+                <p>常见兼容性问题？</p>
+                <pre>
+                    <code>
+* png24位的图片在iE6浏览器上出现背景，
+    解决方案是做成PNG8.
+
+* 浏览器默认的margin和padding不同。
+    解决方案是加一个全局的*{margin:0;padding:0;}来统一。
+
+* IE6双边距bug:块属性标签float后，又有横行的margin情况下，在ie6显示margin比设置的大。
+  浮动ie产生的双倍距离 #box{ float:left; width:10px; margin:0 0 0 100px;}
+  这种情况之下IE会产生20px的距离，
+    解决方案是在float的标签样式控制中加入 ——_display:inline;将其转化为行内属性。(_这个符号只有ie6会识别)
+
+  渐进识别的方式，从总体中逐渐排除局部。
+
+  首先，巧妙的使用“\9”这一标记，将IE游览器从所有情况中分离出来。
+  接着，再次使用“+”将IE8和IE7、IE6分离开来，这样IE8已经独立识别。
+
+  css
+      .bb{
+       background-color:#f1ee18;/*所有识别*/
+      .background-color:#00deff\9; /*IE6、7、8识别*/
+      +background-color:#a200ff;/*IE6、7识别*/
+      _background-color:#1e0bd1;/*IE6识别*/
+      }
+
+*  IE下,可以使用获取常规属性的方法来获取自定义属性,
+   也可以使用getAttribute()获取自定义属性;
+   Firefox下,只能使用getAttribute()获取自定义属性.
+     解决方法:统一通过getAttribute()获取自定义属性.
+
+* IE下,even对象有x,y属性,但是没有pageX,pageY属性;
+  Firefox下,event对象有pageX,pageY属性,但是没有x,y属性.
+    解决方法：（条件注释）缺点是在IE浏览器下可能会增加额外的HTTP请求数。
+
+* Chrome 中文界面下默认会将小于 12px 的文本强制按照 12px 显示,
+  可通过加入 CSS 属性 -webkit-text-size-adjust: none; 解决.
+
+* 超链接访问过后hover样式就不出现了 被点击访问过的超链接样式不在具有hover和active了
+    解决方法是改变CSS属性的排列顺序:
+    L-V-H-A :  a:link {} a:visited {} a:hover {} a:active {}    
+                    </code>
+                </pre>
+            </li>
+            <li>
+                <p>li与li之间有看不见的空白间隔是什么原因引起的？有什么解决办法？</p>
+            </li>
+            <li>
+                <p>为什么要初始化CSS样式？</p>
+                <pre>
+                    <code>
+- 因为浏览器的兼容问题，不同浏览器对有些标签的默认值是不同的，如果没对CSS初始化往往会出现浏览器之间的页面显示差异。
+
+- 当然，初始化样式会对SEO有一定的影响，但鱼和熊掌不可兼得，但力求影响最小的情况下初始化。
+
+*最简单的初始化方法就是： * {padding: 0; margin: 0;} （不建议）
+
+淘宝的样式初始化：
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }
+body, button, input, select, textarea { font:12px/1.5tahoma, arial, \5b8b\4f53; }
+h1, h2, h3, h4, h5, h6{ font-size:100%; }
+address, cite, dfn, em, var { font-style:normal; }
+code, kbd, pre, samp { font-family:couriernew, courier, monospace; }
+small{ font-size:12px; }
+ul, ol { list-style:none; }
+a { text-decoration:none; }
+a:hover { text-decoration:underline; }
+sup { vertical-align:text-top; }
+sub{ vertical-align:text-bottom; }
+legend { color:#000; }
+fieldset, img { border:0; }
+button, input, select, textarea { font-size:100%; }
+table { border-collapse:collapse; border-spacing:0; }      
+                    </code>
+                </pre>
+            </li>
+        </ul>
+    </div>
+    <div class="javascript">
+        <h2>Javascript</h2>
+        <ul class="subject">
+            <li>
+                <p>介绍js的基本数据类型。</p>
+                <pre>
+                    <code>
+Undefined、Null、Boolean、Number、String
+                    </code>
+                </pre>
+            </li>
+            <li>
+                <p>介绍js有哪些内置对象？</p>
+                <pre>
+                    <code>
+Object 是 JavaScript 中所有对象的父对象
+
+数据封装类对象：Object、Array、Boolean、Number 和 String
+其他对象：Function、Arguments、Math、Date、RegExp、Error
+                    </code>
+                </pre>
+            </li>
+            <li>
+                <p>说几条写JavaScript的基本规范？</p>
+                <pre>
+                    <code>
+1.不要在同一行声明多个变量。
+2.请使用 ===/!==来比较true/false或者数值
+3.使用对象字面量替代new Array这种形式
+4.不要使用全局函数。
+5.Switch语句必须带有default分支
+6.函数不应该有时候有返回值，有时候没有返回值。
+7.For循环必须使用大括号
+8.If语句必须使用大括号
+9.for-in循环中的变量 应该使用var关键字明确限定作用域，从而避免作用域污染。
+                    </code>
+                </pre>
+            </li>
+            <li>
+                <p>JavaScript原型，原型链 ? 有什么特点？</p>
+                <pre>
+                    <code>
+每个对象都会在其内部初始化一个属性，就是prototype(原型)，当我们访问一个对象的属性时，
+如果这个对象内部不存在这个属性，那么他就会去prototype里找这个属性，这个prototype又会有自己的prototype，
+于是就这样一直找下去，也就是我们平时所说的原型链的概念。
+关系：instance.constructor.prototype = instance.__proto__
+
+特点：
+JavaScript对象是通过引用来传递的，我们创建的每个新对象实体中并没有一份属于自己的原型副本。当我们修改原型时，与之相关的对象也会继承这一改变。
+
+
+当我们需要一个属性的时，Javascript引擎会先看当前对象中是否有这个属性， 如果没有的话，
+就会查找他的Prototype对象是否有这个属性，如此递推下去，一直检索到 Object 内建对象。
+function Func(){}
+Func.prototype.name = "Sean";
+Func.prototype.getInfo = function() {
+return this.name;
+}
+var person = new Func();//现在可以参考var person = Object.create(oldObject);
+console.log(person.getInfo());//它拥有了Func的属性和方法
+//"Sean"
+console.log(Func.prototype);
+// Func { name="Sean", getInfo=function()}
+                    </code>
+                </pre>
+            </li>
+            <li>
+                <p>JavaScript有几种类型的值？，你能画一下他们的内存图吗？</p>
+                <pre>
+                    <code>
+栈：原始数据类型（Undefined，Null，Boolean，Number、String）
+堆：引用数据类型（对象、数组和函数）
+
+两种类型的区别是：存储位置不同；
+原始数据类型直接存储在栈(stack)中的简单数据段，占据空间小、大小固定，属于被频繁使用数据，所以放入栈中存储；
+引用数据类型存储在堆(heap)中的对象,占据空间大、大小不固定,如果存储在栈中，将会影响程序运行的性能；引用数据类型在栈中存储了指针，该指针指向堆中该实体的起始地址。当解释器寻找引用值时，会首先检索其
+在栈中的地址，取得地址后从堆中获得实体
+                    </code>
+                    <img src="堆栈图.gif"/>
+                </pre>
+            </li>
+            <li>
+                <p>Javascript如何实现继承？</p>
+                <pre>
+                    <code>
+1、构造继承
+2、原型继承
+3、实例继承
+4、拷贝继承
+
+原型prototype机制或apply和call方法去实现较简单，建议使用构造函数与原型混合方式。
+
+function Parent(){
+this.name = 'wang';
+}
+
+function Child(){
+this.age = 28;
+}
+Child.prototype = new Parent();//继承了Parent，通过原型
+
+var demo = new Child();
+alert(demo.age);
+alert(demo.name);//得到被继承的属性
+}
+                    </code>
+                </pre>
+            </li>
+            <li>
+                <p>javascript创建对象的几种方式？</p>
+                <pre>
+                    <code>
+javascript创建对象简单的说,无非就是使用内置对象或各种自定义对象，当然还可以用JSON；但写法有很多种，也能混合使用。
+
+
+1、对象字面量的方式
+
+person={firstname:"Mark",lastname:"Yun",age:25,eyecolor:"black"};
+
+2、用function来模拟无参的构造函数
+
+function Person(){}
+var person=new Person();//定义一个function，如果使用new"实例化",该function可以看作是一个Class
+person.name="Mark";
+person.age="25";
+person.work=function(){
+alert(person.name+" hello...");
+}
+person.work();
+
+3、用function来模拟参构造函数来实现（用this关键字定义构造的上下文属性）
+
+function Pet(name,age,hobby){
+this.name=name;//this作用域：当前对象
+this.age=age;
+this.hobby=hobby;
+this.eat=function(){
+alert("我叫"+this.name+",我喜欢"+this.hobby+",是个程序员");
+}
+}
+var maidou =new Pet("麦兜",25,"coding");//实例化、创建对象
+maidou.eat();//调用eat方法
+4、用工厂方式来创建（内置对象）
+
+var wcDog =new Object();
+wcDog.name="旺财";
+wcDog.age=3;
+wcDog.work=function(){
+alert("我是"+wcDog.name+",汪汪汪......");
+}
+wcDog.work();
+
+
+5、用原型方式来创建
+
+function Dog(){
+
+}
+Dog.prototype.name="旺财";
+Dog.prototype.eat=function(){
+alert(this.name+"是个吃货");
+}
+var wangcai =new Dog();
+wangcai.eat();
+
+
+5、用混合方式来创建
+
+function Car(name,price){
+this.name=name;
+this.price=price;
+}
+Car.prototype.sell=function(){
+alert("我是"+this.name+"，我现在卖"+this.price+"万元");
+}
+var camry =new Car("凯美瑞",27);
+camry.sell();
+                    </code>
+                </pre>
+            </li>
+            <li>
+                <p>Javascript作用链域?</p>
+                <pre>
+                    <code>
+全局函数无法查看局部函数的内部细节，但局部函数可以查看其上层的函数细节，直至全局细节。
+当需要从局部函数查找某一属性或方法时，如果当前作用域没有找到，就会上溯到上层作用域查找，
+直至全局函数，这种组织形式就是作用域链。
+                    </code>
+                </pre>
+            </li>
+            <li>
+                <p>谈谈This对象的理解。</p>
+            </li>
+            <li>
+                <p>eval是做什么的？</p>
+                <pre>
+                    <code>
+它的功能是把对应的字符串解析成JS代码并运行；
+应该避免使用eval，不安全，非常耗性能（2次，一次解析成js语句，一次执行）。
+                    </code>
+                </pre>
+            </li>
+            <li>
+                <p>什么是window对象? 什么是document对象?</p>
+            </li>
+            <li>
+                <p>null，undefined 的区别？</p>
+                <pre>
+                    <code>
+null        表示一个对象被定义了，值为“空值”；
+undefined   表示不存在这个值。
+
+
+typeof undefined
+//"undefined"
+undefined :是一个表示"无"的原始值或者说表示"缺少值"，就是此处应该有一个值，但是还没有定义。当尝试读取时会返回 undefined；
+例如变量被声明了，但没有赋值时，就等于undefined
+
+typeof null
+//"object"
+null : 是一个对象(空对象, 没有任何属性和方法)；
+例如作为函数的参数，表示该函数的参数不是对象；
+
+注意：
+在验证null时，一定要使用　=== ，因为 == 无法分别 null 和　undefined
+
+
+再来一个例子：
+
+null
+Q：有张三这个人么？
+A：有！
+Q：张三有房子么？
+A：没有！
+
+undefined
+Q：有张三这个人么？
+A：没有！
+                    </code>
+                </pre>
+            </li>
+            <li>
+                <p>写一个通用的事件侦听器函数。</p>
+                <pre>
+                    <code>
+// event(事件)工具集，来源：github.com/markyun
+markyun.Event = {
+// 页面加载完成后
+readyEvent : function(fn) {
+if (fn==null) {
+fn=document;
+}
+var oldonload = window.onload;
+if (typeof window.onload != 'function') {
+window.onload = fn;
+} else {
+window.onload = function() {
+oldonload();
+fn();
+};
+}
+},
+// 视能力分别使用dom0||dom2||IE方式 来绑定事件
+// 参数： 操作的元素,事件名称 ,事件处理程序
+addEvent : function(element, type, handler) {
+if (element.addEventListener) {
+//事件类型、需要执行的函数、是否捕捉
+element.addEventListener(type, handler, false);
+} else if (element.attachEvent) {
+element.attachEvent('on' + type, function() {
+handler.call(element);
+});
+} else {
+element['on' + type] = handler;
+}
+},
+// 移除事件
+removeEvent : function(element, type, handler) {
+if (element.removeEventListener) {
+element.removeEventListener(type, handler, false);
+} else if (element.datachEvent) {
+element.detachEvent('on' + type, handler);
+} else {
+element['on' + type] = null;
+}
+},
+// 阻止事件 (主要是事件冒泡，因为IE不支持事件捕获)
+stopPropagation : function(ev) {
+if (ev.stopPropagation) {
+ev.stopPropagation();
+} else {
+ev.cancelBubble = true;
+}
+},
+// 取消事件的默认行为
+preventDefault : function(event) {
+if (event.preventDefault) {
+event.preventDefault();
+} else {
+event.returnValue = false;
+}
+},
+// 获取事件目标
+getTarget : function(event) {
+return event.target || event.srcElement;
+},
+// 获取event对象的引用，取到事件的所有信息，确保随时能使用event；
+getEvent : function(e) {
+var ev = e || window.event;
+if (!ev) {
+var c = this.getEvent.caller;
+while (c) {
+ev = c.arguments[0];
+if (ev && Event == ev.constructor) {
+break;
+}
+c = c.caller;
+}
+}
+return ev;
+}
+};
+                    </code>
+                </pre>
+            </li>
+            <li>
+                <p>["1", "2", "3"].map(parseInt) 答案是多少？</p>
+                <pre>
+                    <code>
+[1, NaN, NaN] 因为 parseInt 需要两个参数 (val, radix)，
+其中 radix 表示解析时用的基数。
+map 传了 3 个 (element, index, array)，对应的 radix 不合法导致解析失败。
+                    </code>
+                </pre>
+            </li>
+            <li>
+                <p>事件是？IE与火狐的事件机制有什么区别？ 如何阻止冒泡？</p>
+                <pre>
+                    <code>
+1. 我们在网页中的某个操作（有的操作对应多个事件）。例如：当我们点击一个按钮就会产生一个事件。是可以被 JavaScript 侦测到的行为。
+2. 事件处理机制：IE是事件冒泡、Firefox同时支持两种事件模型，也就是：捕获型事件和冒泡型事件；
+3. ev.stopPropagation();（旧ie的方法 ev.cancelBubble = true;）
+                    </code>
+                </pre>
+            </li>
+            <li>
+                <p>什么是闭包（closure），为什么要用它？</p>
+                <pre>
+                    <code>
+闭包是指有权访问另一个函数作用域中变量的函数，创建闭包的最常见的方式就是在一个函数内创建另一个函数，通过另一个函数访问这个函数的局部变量,利用闭包可以突破作用链域，将函数内部的变量和方法传递到外部。
+
+闭包的特性：
+
+1.函数内再嵌套函数
+2.内部函数可以引用外层的参数和变量
+3.参数和变量不会被垃圾回收机制回收
+
+//li节点的onclick事件都能正确的弹出当前被点击的li索引
+<ul id="testUL">
+    <li> index = 0</li>
+    <li> index = 1</li>
+    <li> index = 2</li>
+    <li> index = 3</li>
+</ul>
+<script type="text/javascript">
+    var nodes = document.getElementsByTagName("li");
+    for(i = 0;i<nodes.length;i+= 1){
+        nodes[i].onclick = function(){
+            console.log(i+1);//不用闭包的话，值每次都是4
+        }(i);
+    }
+</script>
+
+
+
+执行say667()后,say667()闭包内部变量会存在,而闭包内部函数的内部变量不会存在
+使得Javascript的垃圾回收机制GC不会收回say667()所占用的资源
+因为say667()的内部函数的执行需要依赖say667()中的变量
+这是对闭包作用的非常直白的描述
+
+function say667() {
+// Local variable that ends up within closure
+var num = 666;
+var sayAlert = function() {
+alert(num);
+}
+num++;
+return sayAlert;
+}
+
+var sayAlert = say667();
+sayAlert()//执行结果应该弹出的667
+                    </code>
+                </pre>
+            </li>
+            <li>
+                <p>javascript 代码中的"use strict";是什么意思 ? 使用它区别是什么？</p>
+                <pre>
+                    <code>
+use strict是一种ECMAscript 5 添加的（严格）运行模式,这种模式使得 Javascript 在更严格的条件下运行,
+
+使JS编码更加规范化的模式,消除Javascript语法的一些不合理、不严谨之处，减少一些怪异行为。
+默认支持的糟糕特性都会被禁用，比如不能用with，也不能在意外的情况下给全局变量赋值;
+全局变量的显示声明,函数必须声明在顶层，不允许在非函数代码块内声明函数,arguments.callee也不允许使用；
+消除代码运行的一些不安全之处，保证代码运行的安全,限制函数中的arguments修改，严格模式下的eval函数的行为和非严格模式的也不相同;
+
+提高编译器效率，增加运行速度；
+为未来新版本的Javascript标准化做铺垫。
+                    </code>
+                </pre>
+            </li>
+            <li>
+                <p>如何判断一个对象是否属于某个类？</p>
+                <pre>
+                    <code>
+使用instanceof （待完善）
+if(a instanceof Person){
+alert('yes');
+}
+                    </code>
+                </pre>
+            </li>
+            <li>
+                <p>new操作符具体干了什么呢?</p>
+                <pre>
+                    <code>
+            1、创建一个空对象，并且 this 变量引用该对象，同时还继承了该函数的原型。
+            2、属性和方法被加入到 this 引用的对象中。
+            3、新创建的对象由 this 所引用，并且最后隐式的返回 this 。
+
+var obj  = {};
+obj.__proto__ = Base.prototype;
+Base.call(obj);
+                    </code>
+                </pre>
+            </li>
+            <li>
+                <p>Javascript中，有一个函数，执行时对象查找时，永远不会去查找原型，这个函数是？</p>
+                <pre>
+                    <code>
+hasOwnProperty
+
+javaScript中hasOwnProperty函数方法是返回一个布尔值，指出一个对象是否具有指定名称的属性。此方法无法检查该对象的原型链中是否具有该属性；该属性必须是对象本身的一个成员。
+使用方法：
+object.hasOwnProperty(proName)
+其中参数object是必选项。一个对象的实例。
+proName是必选项。一个属性名称的字符串值。
+
+如果 object 具有指定名称的属性，那么JavaScript中hasOwnProperty函数方法返回 true，反之则返回 false。
+                    </code>
+                </pre>
+            </li>
+            <li>
+                <p>[].forEach.call($$("*"),function(a){a.style.outline="1px solid #"+(~~(Math.random()*(1<<24))).toString(16)}) 能解释一下这段代码的意思吗？</p>
+            </li>
+            <li>
+                <p>js延迟加载的方式有哪些？</p>
+                <pre>
+                    <code>
+defer和async、动态创建DOM方式（用得最多）、按需异步载入js
+                    </code>
+                </pre>
+            </li>
+            <li>
+                <p>Ajax 是什么? 如何创建一个Ajax？</p>
+                <pre>
+                    <code>
+ajax的全称：Asynchronous Javascript And XML。
+异步传输+js+xml。
+所谓异步，在这里简单地解释就是：向服务器发送请求的时候，我们不必等待结果，而是可以同时做其他的事情，等到有了结果它自己会根据设定进行后续操作，与此同时，页面是不会发生整页刷新的，提高了用户体验。
+
+(1)创建XMLHttpRequest对象,也就是创建一个异步调用对象
+(2)创建一个新的HTTP请求,并指定该HTTP请求的方法、URL及验证信息
+(3)设置响应HTTP请求状态变化的函数
+(4)发送HTTP请求
+(5)获取异步调用返回的数据
+(6)使用JavaScript和DOM实现局部刷新
+                    </code>
+                </pre>
+            </li>
+            <li>
+                <p>同步和异步的区别?</p>
+                <pre>
+                    <code>
+同步的概念应该是来自于OS中关于同步的概念:不同进程为协同完成某项工作而在先后次序上调整(通过阻塞,唤醒等方式).同步强调的是顺序性.谁先谁后.异步则不存在这种顺序性.
+
+同步：浏览器访问服务器请求，用户看得到页面刷新，重新发请求,等请求完，页面刷新，新内容出现，用户看到新内容,进行下一步操作。
+
+异步：浏览器访问服务器请求，用户正常操作，浏览器后端进行请求。等请求完，页面不刷新，新内容也会出现，用户看到新内容。
+
+（待完善）
+                    </code>
+                </pre>
+            </li>
+            <li>
+                <p>如何解决跨域问题?</p>
+                <pre>
+                    <code>
+jsonp、 iframe、window.name、window.postMessage、服务器上设置代理页面
+                    </code>
+                </pre>
+            </li>
+        </ul>
+    </div>
+</div>
+<footer>
+    <a href="https://github.com/markyun/My-blog/tree/master/Front-end-Developer-Questions/Questions-and-Answers" target="_blank">题目来源</a>
+</footer>
+</body>
+</html>

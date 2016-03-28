@@ -1,0 +1,117 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    font-family: arial, 宋体, '微软雅黑', serif, sans-serif;
+    background-color: #3fa9d3;
+}
+
+.wrapper {
+    margin: 20px auto;
+    width: 1200px;
+    /*让盒子内容水平垂直居中*/
+    display: -webkit-flex;
+    /*-webkit-box-orient: horizontal;*/
+    /*-webkit-box-pack: center;*/
+    /*-webkit-box-align: center;*/
+    /*-webkit-box-orient:inline-axis;*/
+    background-color: #fff;
+    /*分为三栏*/
+    /*-webkit-column-count: 3;*/
+    border-radius: 10px;
+}
+
+.wrapper .left {
+    background-color: antiquewhite;
+    -webkit-order: 1;
+    -webkit-flex: 1;
+    /*设置元素溢出不换行*/
+    flex-wrap: nowrap;
+    text-align: center;
+}
+
+.wrapper .middle {
+    /*background-color: #5ae2d5;*/
+    -webkit-order: 2;
+    -webkit-flex: 4;
+    flex-wrap: nowrap;
+    text-align: center;
+
+}
+
+.wrapper .right {
+    background-color: antiquewhite;
+    -webkit-order: 3;
+    -webkit-flex: 1;
+    flex-wrap: nowrap;
+    text-align: center;
+}
+
+.arrow {
+    background-image: url("http://p0.qhimg.com/t01d4ac192567460c94.gif");
+}
+
+.dish-box-hd {
+    height: 30px;
+
+    /*background-color: #009900;*/
+}
+
+.dish-box-hd h2 {
+    font-size: 1.3em;
+    color: red;
+    display: inline-block;
+    font-family: "Microsoft Yahei";
+}
+
+.dish-box-hd a {
+    /*display: inline-block;*/
+    /*float: right;*/
+}
+
+.wrapper .g-mixlist {
+    margin: 10px auto;
+    text-align: center;
+    list-style: none;
+    line-height: 21px;
+    background-color: #007bdd;
+}
+
+.wrapper .g-mixlist li {
+    float: left;
+    margin: 15px 20px 0 0;
+
+}
+
+#head {
+    height: 50px;
+    line-height: 50px;
+    background-image: url("images/wrapbg_v0.0.1.jpg");
+}
+
+#head h1 {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    color: #fff;
+}
+
+.left ul, .right ul {
+    list-style: none;
+    padding: 0;
+}
+
+.left ul li, .right ul li {
+    line-height: 30px;
+}
+
+.left ul a, .right ul a {
+    text-decoration: none;
+    display: block;
+    border: 1px dashed #fff;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}

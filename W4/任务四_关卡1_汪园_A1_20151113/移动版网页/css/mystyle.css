@@ -1,0 +1,375 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /*字体大小是页面默认大小的100%*/
+    font: normal 100% "Microsoft YaHei", "宋体", sans-serif;
+    max-width: 640px;
+    min-width: 480px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.wrapper {
+    /*width: 640px;*/
+    width: 100%;
+    margin: 0 auto;
+}
+
+.orange-color {
+    color: #ff6300;
+}
+
+.blue-color {
+    color: #00a0e8;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*头部*/
+.header {
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    line-height: 50px;
+}
+
+.header .logoBox {
+    display: table-cell;/*便于使用vertical-align使图片垂直居中*/
+    width: 20%;
+    float: left;
+    margin-right: 10%;
+    margin-left: 2%;
+}
+
+.header .logo {
+    width: 100%;
+    /*垂直居中*/
+    vertical-align: middle;
+}
+
+.header .location {
+    float: left;
+    margin: 0 3%;
+
+}
+
+.header .searchBox {
+    float: right;
+    margin: 2.3% 4.6% 0 0;
+    display: table-cell;
+    width: 20%;
+}
+
+.header .searchBox img:nth-child(1) {
+    margin-left: -15%;
+    margin-right: 15%;
+}
+
+/*banner样式*/
+.banner {
+    position: relative;
+    background-color: #9aba59;
+}
+
+.banner-image {
+    width: 100%;
+    height: 291px;
+}
+
+.banner-image img {
+    margin-top: -8%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+.banner-icon-group {
+    width: 100%;
+    margin-top: 41%;
+    position: absolute;
+    z-index: 2;
+}
+
+.banner-icon-group div {
+    float: left;
+    text-align: center;
+    margin-left: 9%;
+
+}
+
+.banner-icon-group div a:hover {
+    color: #00a0e8;
+}
+
+.banner a {
+    display: block;
+    width: 100%;
+
+}
+
+/*特价游*/
+.sales {
+    clear: both;
+    width: 100%;
+    margin-top: 61%;
+}
+
+.salesDetail {
+    margin: 20px 0;
+}
+
+.salesDetail-title {
+    width: 100%;
+    height: 32px;
+    text-align: center;
+    position: relative;
+}
+
+.salesDetail-title .line {
+    width: 30%;
+    height: 2px;
+    background-color: #00a0e8;
+}
+
+.salesDetail-title .line-left {
+    /*设置margin没用*/
+    position: relative;
+    top: 15px;
+}
+
+.salesDetail-title .line-right {
+    float: right;
+    margin-top: -18px;
+}
+
+.salesDetail-title .sale-title {
+    font-size: 1.6em;
+    font-family: 宋体, '微软雅黑', serif, sans-serif;
+}
+
+.salesDetail-content {
+    width: 100%;
+    height: 175px;
+    margin-top: 10px;
+    display: -webkit-flex;
+
+}
+
+.salesDetail-content .left-img {
+    /*width: 0.5em;*/
+    height: 175px;
+    margin: 0 15px 0 10px;
+    float: left;
+    flex: 1;
+}
+
+.salesDetail-content .right-content {
+    flex: 1;
+}
+
+.right-content table.right-content-detail {
+    width: 100%;
+}
+
+.right-content .right-content-title {
+    display: block;
+    width: 100%;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.right-content .right-content-detail-l {
+    font-size: 0.7em;
+}
+
+.money {
+    font-size: 0.8em;
+    text-decoration: line-through;
+    vertical-align: bottom;
+}
+
+.salesBtnGroup {
+    text-align: center;
+}
+
+.time {
+    background-color: #f7f7f7;
+}
+
+.time p {
+    text-align: center;
+    font-size: 0.5em;
+}
+
+.salesBtn {
+    width: 97px;
+    height: 34px;
+    border-style: none;
+    background-color: transparent;
+}
+
+/*猜你喜欢模快*/
+.love .blue-banner {
+    width: 100%;
+    height: 51px;
+    background-color: #00a0e8;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.love .blue-banner .line-white {
+    width: 1px;
+    height: 42px;
+    background-color: #fff;
+    float: left;
+    margin-top: 5px;
+}
+
+.love .blue-banner p {
+    display: block;
+    width: 49.8%;
+    float: left;
+    text-align: center;
+    margin-top: 13px;
+}
+
+/*精品推荐*/
+.recommend {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+}
+
+.recommend .tabs {
+    position: absolute;
+    left: 5%;
+    width: 50%;
+}
+
+.recommend .tabs span {
+    display: block;
+    width: 17.19%;
+    float: left;
+    color: #fff;
+    padding: 14px 0;
+}
+
+.recommend .tabs span:nth-child(1) {
+    background-color: #fd7e2e;
+}
+
+.recommend .tabs span:nth-child(2) {
+    background-color: #fb6802;
+}
+
+.recommend .tabs span:nth-child(3) {
+    background-color: #00a8b5;
+}
+
+.recommend .tabs span:nth-child(4) {
+    background-color: #00a0e8;
+}
+
+.recommend-image img {
+    width: 97%;
+}
+
+.recommend .recommend-image .recom-title {
+    border: 1px solid #bbbbbb;
+    width: 96.5%;
+    margin-top: -5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.recom-title p {
+    font-size: 1.6em;
+}
+
+.recom-title p:nth-child(1) {
+    float: left;
+    border-right: 1px solid #bbb;
+    padding: 20px;
+}
+
+.recom-title p:nth-child(2) {
+    padding: 20px 0;
+}
+
+/*脚部信息*/
+.footer {
+    width: 100%;
+    margin-top: 2.1%;
+    margin-bottom: 2%;
+}
+
+.footer .myuser {
+    width: 100%;
+    height: 51px;
+    background-color: #00a0e8;
+    color: #fff;
+}
+
+.footer .myuser button {
+    font-size: 100%;
+    line-height: 130%;
+    color: #fff;
+    border-style: none;
+    background: none;
+    margin-top: 13px;
+}
+
+.footer .myuser button:nth-child(1) {
+    margin-left: 11.4%;
+}
+
+.footer .myuser button:nth-child(2) {
+    float: right;
+    margin-right: 40px;
+}
+
+.footer .cline-download {
+    text-align: center;
+    margin: 10px 0;
+    float: left;
+    width: 100%;
+}
+
+.footer .cline-download a {
+    color: #00a0e8;
+    font-weight: bold;
+    margin: 0 6%;
+}
+
+.footer .cline-download a:hover {
+    color: #fd7e2e;
+}
+
+.footer-bottom {
+    display: flex;
+}
+
+.footer-bottom .footer-bottom-left {
+    flex: 8;
+}
+
+.footer-bottom .footer-bottom-right {
+    flex: 2;
+    margin-top: 1.5%;
+    text-align: center;
+}
+
+.footer .copyright {
+    text-align: center;
+    font-size: 12px;
+    float: left;
+    width: 100%;
+
+}
+

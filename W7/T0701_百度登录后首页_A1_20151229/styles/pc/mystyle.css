@@ -1,0 +1,1028 @@
+
+html {
+    height: 100%;
+}
+
+body {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-family: arial, 宋体, '微软雅黑', serif, sans-serif;
+    font-size: 12px;
+    height: 100%;
+}
+
+.wrapper {
+    height: 100%;
+    /*设置最小高度和宽度*/
+    min-width: 1000px;
+    position: relative;
+    /*_width: expression(document.body.clientWidth>810 ? "810px" : "auto");*/
+}
+
+#header {
+    /*height: 100%;*/
+    /*display: block;*/
+    /*text-align: center;*/
+    /*position: relative;*/
+}
+
+#top {
+    height: 31px;
+    border-bottom: 1px solid #ebebeb;
+    /*background-color: #666666;*/
+}
+
+/*顶部左侧天气*/
+.top-weater {
+    margin-left: 10px;
+    height: 32px;
+    line-height: 32px;
+    float: left;
+    color: #555;
+}
+
+.show-weather {
+    float: left;
+    position: relative;
+}
+
+.show-icon {
+    margin-right: 9px;
+}
+
+.weater-icon {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: url("../../images/a0.png") no-repeat;
+    vertical-align: middle;
+    margin-left: -3px;
+}
+
+.wea-widget {
+    position: absolute;
+    display: none;
+}
+
+.show-pollution {
+    float: left;
+}
+
+.show-pollution-name {
+    font-weight: bold;
+    color: #38f;
+    margin-right: 4px;
+    margin-left: 4px;
+}
+
+.show-pollution-num {
+    margin-right: 3px;
+}
+
+.s-icons {
+    float: left;
+    height: 32px;
+    line-height: 32px;
+    margin-left: 10px;
+}
+
+.s-icons a {
+    color: #555;
+    margin-right: 19px;
+}
+
+.menu {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 590px;
+    text-align: right;
+}
+
+.menu li {
+    display: inline-block;
+}
+
+.menu a {
+    color: #555;
+    float: left;
+    margin-left: 19px;
+    font-size: 13px;
+    line-height: 32px;
+}
+
+.menu a.mnav {
+    font-weight: bold;
+}
+
+.menu .more {
+    display: block;
+    width: 86px;
+    height: 31px;
+    line-height: 31px;
+    color: #fff;
+    text-decoration: none;
+    background-color: #3387fe;
+    font-size: 13px;
+    text-align: center;
+    border-bottom: 1px solid #398bfb;
+    z-index: 100;
+}
+
+#s_username_top {
+    font-weight: normal;
+}
+
+/*更多产品下拉菜单*/
+.bdbri {
+    width: 85px;
+    min-height: 600px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #f9f9f9;
+    border-left: 1px solid #e7e7e7;
+    text-align: center;
+    display: none;
+}
+
+.bdmainlink {
+    color: #333;
+    width: 66px;
+    height: 43px;
+    line-height: 43px;
+    padding-top: 9px;
+    margin: 0 auto;
+    border-bottom: #f0f0f0 1px solid;
+    font-size: 13px;
+    cursor: default;
+}
+
+.bdbriwrapper {
+    width: 66px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.bdbriwrapper li a {
+    display: block;
+    text-align: center;
+    width: 66px;
+    height: 76px;
+    margin: 0 auto;
+    border-bottom: #f0f0f0 1px solid;
+    color: #666;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.bdbriwrapper li a span {
+    width: 36px;
+    height: 36px;
+    display: block;
+    margin: 10px auto 5px;
+    background: url("../../images/bdbri_icons_2e35e84b.png") no-repeat;
+    cursor: pointer;
+}
+
+.bdbriwrapper li a span.bdbriimgitem_3 {
+    width: 40px;
+    background-position: -72px 0;
+}
+
+.bdbriwrapper li a span.bdbriimgitem_4 {
+    background-position: -112px 0;
+}
+
+.bdbriwrapper li a span.bdbriimgitem_2 {
+    background-position: -36px 0;
+}
+
+.bdbriwrapper li a span.bdbriimgitem_5 {
+    background-position: -148px 0;
+}
+
+.bdbriwrapper li a span.bdbriimgitem_6 {
+    background-position: -184px 0;
+}
+
+.bdbriwrapper li a span.bdbriimgitem_7 {
+    background-position: -220px 0;
+}
+
+.bdbriwrapper li:hover {
+    text-decoration: underline;
+}
+
+/*中间form表单--开始*/
+#s_form {
+    width: 641px;
+    height: 100%;
+    min-height: 253px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.bdform {
+    width: 641px;
+    height: 37px;
+    margin: 10px auto 0;
+    text-align: left;
+}
+
+.user-menu {
+    margin-left: 15px;
+}
+
+/*input输入框包裹*/
+.s_ipt_wr {
+    float: left;
+}
+
+.s_btn_wr {
+    display: block;
+    float: left;
+    width: 102px;
+    height: 38px;
+    border: 1px solid #38f;
+    border-bottom: 1px solid #2e7ae5;
+    background-color: #38f;
+}
+
+.s-input {
+    width: 521px;
+    height: 20px;
+    padding: 9px 7px;
+    font: 16px arial;
+    border: 1px solid #b8b8b8;
+    border-bottom: 1px solid #ccc;
+    border-right: 0;
+    vertical-align: top;
+    outline: none;
+    box-shadow: none;
+}
+
+/*百度原版采用动态添加ipthover,iptfocus属性*/
+.s_ipt_wr:hover {
+    border-color: #999 transparent #b3b3b3 #999;
+}
+
+.s_ipt_wr:focus {
+    border: 1px solid #3387fe;
+    border-color: #4791ff transparent #4791ff #4791ff;
+}
+
+.s-btn {
+    cursor: pointer;
+    width: 102px;
+    height: 38px;
+    line-height: 38px;
+    padding: 0;
+    border: 0;
+    background: none;
+    background-color: #38f;
+    font-size: 16px;
+    color: white;
+    box-shadow: none;
+    font-weight: normal;
+}
+
+.s-btn:hover {
+    background-color: #317ef3;
+    border-bottom: 1px solid #2868c8;
+    box-shadow: 1px 1px 1px #ccc;
+}
+
+/*我的关注选项卡内容*/
+.s-isindex-wrap {
+    min-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#s_main {
+    position: relative;
+    margin: 0 auto;
+    width: 895px;
+}
+
+.s-mancard-main {
+    width: 893px;
+    height: 39px;
+    line-height: 39px;
+    margin: 0 auto;
+    font-size: 14px;
+    border: 1px solid #e9e9e9;
+    border-bottom: none;
+    color: #333;
+}
+
+.s-menu-container div {
+
+}
+
+.mine-text-wr {
+    float: left;
+    width: 124px;
+    background-color: #fff;
+
+}
+
+.mine-icon {
+    display: inline-block;
+    margin-left: 20px;
+    width: 20px;
+    height: 18px;
+    background: url(../../images/card_setts_fdb17359.png) no-repeat -15px 0;
+    vertical-align: middle;
+}
+
+.mine-text {
+    display: inline-block;
+}
+
+.s-menus-wr {
+    float: left;
+    width: 719px;
+}
+
+/*設置*/
+.s-menu-set {
+    float: right;
+    width: 18px;
+    padding: 0 21px 0 11px;
+    cursor: pointer;
+}
+
+.menu-icon {
+    display: block;
+    width: 100%;
+    height: 18px;
+    margin-top: 11px;
+    overflow: hidden;
+    background: url(../../images/card_setts_fdb17359.png) no-repeat -121px -49px;
+}
+
+/*推荐*/
+.menu-text {
+    display: inline-block;
+    width: 80px;
+    height: 39px;
+    text-align: center;
+    margin-right: -4px;
+}
+
+.current {
+    background-color: #999ca1;
+    font-weight: bold;
+    color: #fff;
+}
+
+.menu-text:hover {
+    display: inline-block;
+    background-color: #b3b6bb !important;
+    color: #fff;
+}
+
+.mine-text-wr:hover {
+    color: #fff;
+    background-color: #b3b6bb;
+}
+
+.mine-text-wr:hover .mine-icon {
+    background-position: -144px 0;
+}
+
+/*内容区域包裹层*/
+.s-ctner-contents {
+    width: 893px;
+    min-height: 363px;
+    _height: 363px;
+    _overflow: visible;
+    border: 1px solid #e9e9e9;
+}
+
+.s-content {
+    width: 843px;
+    padding: 0 25px;
+    position: relative;
+}
+
+/*我的关注内容区*/
+
+.s-content-load {
+    padding: 150px 0;
+    text-align: center;
+}
+
+/*推荐内容样式*/
+.s-news-rank-wrapper {
+    width: 300px;
+    margin-top: 20px;
+    position: absolute;
+    top: 0;
+    right: 5px;
+}
+
+.s-rank-title {
+    width: 270px;
+    height: 30px;
+}
+
+.title-text {
+    float: left;
+    height: 22px;
+    width: 94px;
+    padding-top: 3px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.s-rank-title a {
+    text-decoration: none;
+    color: #333;
+}
+
+.hot-refresh {
+    display: block;
+    float: right;
+    width: 60px;
+    height: 22px;
+    padding-top: 3px;
+    cursor: pointer;
+}
+
+.hot-refresh-icon {
+    display: inline-block;
+    width: 20px;
+    height: 16px;
+    background: url("../../images/news_7dd96f5d.png") -23px -25px no-repeat;
+    vertical-align: middle;
+}
+
+.hot-refresh-text {
+    font-size: 13px;
+    text-align: center;
+    width: 60px;
+    margin-left: -5px;
+}
+
+.s-news-rank-content {
+
+}
+
+.news-meta-item {
+    display: inline-block;
+    width: 145px;
+    height: 34px;
+    line-height: 34px;
+    margin-right: 3px;
+    font-size: 14px;
+}
+
+/*列表前小黑點*/
+.news-icon {
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    background-color: #666;
+    vertical-align: middle;
+    margin-right: 7px;
+}
+
+/*列表內容*/
+.title-content {
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.news-title a:hover {
+    text-decoration: underline;
+    color: #0079f4;
+}
+
+/*根据兴趣推荐样式--开始*/
+.news-flash-tips {
+    width: 100%;
+    height: 38px;
+    /*background-color: #2868c8;*/
+}
+
+/*左/右侧线*/
+.left-line, .right-line {
+    display: inline-block;
+    width: 172px;
+    height: 0;
+    border-bottom: 1px solid #e2e2e2;
+    vertical-align: middle;
+}
+
+/*中间文字*/
+.content-tips {
+    display: inline-block;
+    /*float: left;*/
+    width: 187px;
+    padding-top: 21px;
+    margin: 0 auto;
+}
+
+.tips-icon {
+    display: inline-block;
+    width: 12px;
+    height: 14px;
+    margin: 0 6px;
+    background: url("../../images/news_7dd96f5d.png") -45px -1px no-repeat;
+    vertical-align: middle;
+}
+
+.content-tips span {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 13px;
+    color: #999;
+}
+
+/*根据兴趣推荐样式--结束*/
+/*左侧热点详情--开始*/
+.s-news-content-detail {
+    width: 538px;
+}
+
+.s-news-item {
+    position: relative;
+}
+
+.s-text-content {
+    display: inline-block;
+    width: 335px;
+    height: 96px;
+    margin-right: 25px;
+    font-size: 0;
+    color: #999;
+    margin-top: 20px;
+}
+
+.s-text-content h2 a {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+
+.status {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("../../images/news_7dd96f5d.png") -20px -100px no-repeat;
+    margin-right: 3px;
+}
+
+.s-pic-content {
+    display: inline-block;
+    width: 176px;
+    position: relative;
+    vertical-align: top;
+    margin-top: 20px;
+    margin-left: -3px;
+}
+
+.form {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.5);
+    height: 15px;
+    line-height: 15px;
+    margin-top: -12px;
+}
+
+.form a {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+}
+
+.dustbin {
+    position: absolute;
+    right: -2px;
+    top: 2px;
+    background: url("../../images/dustbin1_ec5b2acc.png") no-repeat -0px -0px;
+    width: 15px;
+    height: 15px;
+    /*display: none; */
+}
+
+/*热点新闻2图片ul*/
+.s-news-item-tpl-1 {
+    display: block;
+    min-height: 210px;
+    border-top: 1px solid #f0f0f0;
+    margin-top: 10px;
+}
+
+.s-news-item-tpl-1 h2 {
+    width: 100%;
+    height: 35px;
+    padding-top: 20px;
+    font-size: 18px;
+}
+
+.s-news-item-tpl-1 h2 a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+}
+
+.s-news-item-tpl-1 .s-pic-content {
+    margin-top: 0;
+    width: 100%;
+    margin-left: 3px;
+}
+
+.s-news-content-imgs {
+    padding-bottom: 16px;
+
+}
+
+.item-img-wrap {
+    display: inline-block;
+    height: 106px;
+    width: 176px;
+}
+
+/*导航选项卡样式*/
+#s_content_3 {
+
+}
+
+.s-nav-area {
+    width: 868px;
+    padding: 10px 0 13px 0;
+}
+
+.s-nav-area h1 {
+    margin: 8px 0 4px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.nav-item {
+    margin-left: -3px;
+    margin-top: 15px;
+    margin-right: 15px;
+    display: inline-block;
+    position: relative;
+}
+
+.nav-block {
+    display: block;
+    width: 126px;
+    height: 58px;
+    line-height: 58px;
+    background-color: #fcfcfc;
+    border: 1px solid #fcfcfc;
+    position: relative;
+}
+
+.nav-block img {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    margin-top: -8px;
+    height: 16px;
+    width: 16px;
+}
+
+.nav-block .nav-txt {
+    display: inline-block;
+    position: absolute;
+    text-align: left;
+    left: 44px;
+    color: #333;
+    font-size: 14px;
+    padding: 0;
+    max-width: 71px;
+}
+
+.rebate {
+    display: none;
+    width: 100%;
+    height: 18px;
+    line-height: 18px;
+    font-size: 12px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #ff8300;
+}
+
+.rebate a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.rebate a:hover {
+    text-decoration: underline;
+}
+
+.rebate-hover {
+    background: #ff6300;
+    color: #fff;
+}
+
+.nav-item:hover .nav-block {
+    border: 1px solid rgba(0, 0, 0, .05);
+}
+
+.nav-block:hover .rebate a {
+    text-decoration: underline;
+}
+
+.fanli-tag {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+    background: url("../../images/fanli_40794035.png") repeat 0 0;
+}
+
+/*视频选项卡*/
+#s_content_4 {
+    padding: 0;
+}
+
+.s-video-wrapper {
+    height: 363px;
+    width: 868px;
+    margin: 0 auto;
+}
+
+.video-col {
+    margin-left: 20px;
+    width: 195px;
+    height: 320px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    _display: inline;
+    overflow: hidden;
+}
+
+.video-item {
+    width: 195px;
+}
+
+.v-pic-1 {
+    width: 195px;
+    height: 270px;
+}
+
+.video-item-1 .v-txt {
+    height: 49px;
+    width: 175px;
+    overflow: hidden;
+    padding: 0 9px;
+}
+
+.video-col .video-item-1 .v-txt .text {
+    display: block;
+    height: 14px;
+    margin-top: 6px;
+    _margin-top: 9px;
+}
+
+.video-col .video-item .v-txt .text a {
+    font-size: 14px;
+    color: #333;
+    max-width: 195px;
+    display: inline-block;
+    text-align: left;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.video-col .video-item-1 .v-txt .score {
+    font-size: 13px;
+    color: #999;
+    margin-top: 6px;
+}
+
+.video-col .video-item-2 .v-txt {
+    padding-top: 5px;
+    line-height: 20px;
+    height: 44px;
+    width: 179px;
+    _width: 179px;
+    overflow: hidden;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+.video-col .video-item-2 .v-txt .text {
+    display: block;
+    height: 40px;
+}
+
+.video-col .video-item-2 .v-txt .text a {
+    margin-top: -2px;
+    white-space: normal;
+    font-size: 13px;
+    line-height: 21px;
+}
+
+/*购物选项卡*/
+#s_content_5 {
+    width: 893px;
+    padding-left: 13px;
+}
+
+.shopping-card-wrapper .shopping-card-item {
+    float: left;
+    width: 202px;
+    overflow: hidden;
+    margin-left: 11px;
+    margin-top: 21px;
+    _display: inline;
+}
+
+.shopping-card-wrapper .shopping-card-item .shopping-card-imgwrapper {
+    position: relative;
+    width: 202px;
+    height: 123px;
+}
+
+.shopping-card-wrapper .shopping-card-item .img {
+    display: inline-block;
+    text-decoration: none;
+    width: 202px;
+    height: 123px;
+}
+
+.shopping-card-wrapper .shopping-card-item img {
+    width: 202px;
+    height: 123px;
+}
+
+.shopping-card-wrapper .shopping-card-item .shopping-card-imgwrapper .mask {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 24px;
+    overflow: hidden;
+    width: 100%;
+    line-height: 24px;
+    font-size: 13px;
+    color: #fff;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5) 0, rgba(0, 0, 0, 0.5) 100%);
+}
+
+.shopping-card-wrapper .shopping-card-item .shopping-card-text {
+    height: 21px;
+    line-height: 21px;
+    margin-top: 7px;
+}
+
+.shopping-card-wrapper .shopping-card-item .shopping-card-title {
+    text-decoration: none;
+    float: left;
+    display: inline-block;
+    max-width: 135px;
+    font-size: 14px;
+    color: #333;
+    _width: 135px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-align: left;
+}
+
+.shopping-card-wrapper .shopping-card-item .shopping-card-price {
+    float: right;
+    margin-right: 0;
+    font-size: 18px;
+    color: #e00;
+    font-family: Arial;
+    display: inline-block;
+    width: 65px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+/*脚部*/
+#footer {
+    height: 100px;
+    /*position: absolute;*/
+    bottom: 44px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+}
+
+#footer .ftConW {
+    width: 720px;
+    margin: 0 auto;
+}
+
+p.about {
+    margin: 16px 0 5px;
+}
+
+p.about a {
+    margin: 0 10px;
+}
+
+.cp, .cp > a {
+    color: #666;
+}
+
+/*下拉菜单样式实现---开始*/
+.bdpfmenu {
+    display: none;
+    width: 70px;
+    position: absolute;
+    top: 32px;
+    margin-top: -1px;
+    border: 1px solid #d1d1d1;
+    -webkit-box-shadow: 1px 1px 5px #d1d1d1;
+    -moz-box-shadow: 1px 1px 5px #d1d1d1;
+    box-shadow: 1px 1px 5px #d1d1d1;
+    _margin-left: -50px; /*IE6*/
++ margin-left : - 50 px; /*IE7/8/9*/
+    z-index: 10;
+}
+
+.selectMenu li a {
+    display: block;
+    width: 70px;
+    line-height: 26px;
+    text-decoration: none;
+    color: #333;
+    text-align: center;
+    margin-left: 0;
+}
+
+.bdpfmenu a:hover {
+    display: block;
+    line-height: 26px;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    background-color: #3384fe;
+}
+
+/*下拉菜单小箭头样式--开始*/
+.bdnuarrow {
+    width: 20px;
+    height: 20px;
+    font-size: 0;
+    display: block;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    margin-left: -5px;
+    _margin-left: -15px; /*IE6*/
++ margin-left : - 13 px;
+}
+
+.bdnuarrow em, .bdnuarrow i {
+    width: 0;
+    height: 0;
+    font-size: 0;
+    display: block;
+    /*定义position使em标签和i标签重合*/
+    position: absolute;
+    border: 5px solid transparent;
+    border-style: dashed dashed solid dashed; /*IE6下使其他3条边达到透明效果*/
+}
+
+/*通过将em标签向上平移1px*/
+.bdnuarrow em {
+    border-bottom-color: #d8d8d8;
+    top: -1px;
+}
+
+.bdnuarrow i {
+    border-bottom-color: #fff;
+    top: 0;
+}
+
+/*下拉菜单小箭头样式--结束*/
+.s-content {
+    display: none;
+}
+
+#s_content_2 {
+    display: block;
+}

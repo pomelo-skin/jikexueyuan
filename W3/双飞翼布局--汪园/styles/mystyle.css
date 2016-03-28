@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    width: 100%;
+    font-size: 14px;
+    font-family: arial, 宋体, '微软雅黑', serif, sans-serif;
+    background-color: #3fa9d3;
+}
+/*头部head--开始*/
+#head {
+    height: 50px;
+    background-image: url("../images/wrapbg_v0.0.1.jpg");
+    margin-bottom: 15px;
+}
+#head h1{
+    text-align: center;
+    color: #fff;
+    line-height: 50px;
+}
+/*头部head--结束*/
+/*中间主体部分 --开始*/
+/*主体部分-中间*/
+#article {
+    width: 1200px;
+    margin: 0 auto;
+    /*height: 800px;*/
+}
+#article .middle {
+    background-color: #fff;
+    float: left;
+    width: 100%;
+    /*等高排列*/
+    padding-bottom: 9999px;
+    margin-bottom: -9999px;
+    overflow: hidden;
+}
+#article .middle .middle_inner{
+padding: 0 220px;
+}
+.dish-box-bd{
+    background: #fff;
+    text-align: center;
+}
+ul{
+    list-style: none;
+}
+.g-mixlist li{
+    display:inline-block;
+    margin: 15px;
+}
+/*中间字体样式*/
+.cont{
+    font-size: 1.2em;
+    margin-top:20px;
+}
+.dish-box-hd{
+   /*background-color: #1c7885;*/
+    text-align: center;
+}
+.dish-box-hd h2{
+    margin: 10px;
+    color: red;
+    text-align: center;
+    font-size: 1.7em;
+    font-weight: 700;
+    /*background: #007bdd;*/
+    display: inline-block;
+}
+/*主体部分左边*/
+#article .left {
+    background-color: antiquewhite;
+    float: left;
+    width: 200px;
+    margin-left: -100%;
+    text-align: center;
+    /*等高排列*/
+    padding-bottom: 9999px;
+    margin-bottom: -9999px;
+    overflow: hidden;
+}
+#article .left h2,#article .right h2{
+    margin: 8px 0;
+}
+#article .left li ,#article .right li{
+    line-height: 27px;
+    border-bottom: 2px dashed #fff;
+}
+
+/*主体部分右边*/
+#article .right {
+    background-color: antiquewhite;
+    float: left;
+    width: 200px;
+    margin-left: -200px;
+    text-align: center;
+    /*等高排列*/
+    padding-bottom: 9999px;
+    margin-bottom: -9999px;
+    overflow: hidden;
+}
+/*设置a标签*/
+a{
+    text-decoration: none;
+    color: #333;
+}
+/*中间主体部分 --结束*/
+/*foot--开始*/
+#foot{
+    clear: both;
+    height: 100px;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+background-color: #3fa8d2;
+}
+#foot .ftConW p{
+    text-align: center;
+    padding: 10px 0;
+    color: #333;
+}
+/*foot--结束*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

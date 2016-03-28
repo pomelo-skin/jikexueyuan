@@ -1,0 +1,110 @@
+/*gloable*/
+html, body, ul, li, input, div {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    background-color: #aaaaaa;
+    position: relative;
+}
+
+.page {
+    width: 400px;
+    height: 420px;
+    background-color: #286090;
+    padding-top: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.keyboard {
+    padding: 10px;
+    /*background-color: #398439;*/
+}
+
+.s-ipt {
+    width: 379px;
+    height: 54px;
+    background-color: #fff;
+    border: 1px solid #286090;
+    box-sizing: border-box;
+    margin-left: 10px;
+}
+
+.showscreen {
+    width: 94%;
+    height: 100%;
+    text-align: right;
+    box-sizing: border-box;
+    border: none;
+    font-size: 30px;
+}
+
+li {
+    width: 80px;
+    height: 60px;
+    border: 1px solid #aaa;
+    background-color: #fff;
+    display: inline-block;
+    line-height: 60px;
+    margin-top: 6px;
+    margin-right: -1px;
+    border-radius: 3px;
+}
+
+li.operator {
+    width: 50px;
+}
+
+.changecolor {
+    width: 168px;
+}
+
+.two {
+    width: 263px;
+    float: left;
+    margin-left: 10px;
+}
+
+.zero {
+    width: 169px;
+}
+
+.equal {
+    width: 110px;
+    height: 130px;
+    margin-left: -6px;
+    margin-top: 6px;
+    font-size: 30px;
+}
+
+/*Çå³þ¸¡¶¯*/
+.clearfix:before, .clearfix:after {
+    content: '';
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+li:hover, .equal:hover {
+    background-color: #fd7e2e;
+    color: #fff;
+    border: 1px solid #286090;
+}

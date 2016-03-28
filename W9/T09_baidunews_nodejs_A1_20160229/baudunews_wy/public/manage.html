@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>百度新闻后台管理系统</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/manger.css">
+    <script src="javascripts/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="javascripts/manage.js"></script>
+</head>
+
+<body>
+<div id="wrapper">
+    <!--头部-->
+    <div id="header">
+        <h2>百度新闻后台管理系统</h2>
+    </div>
+    <!--main-->
+    <div id="main">
+        <div class="left-nav">
+            <ul>
+                <li><a id="news_list" class="cur" href="javascript:">新闻列表</a></li>
+                <li><a id="news_add" href="javascript:">发布新闻</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <div class="r-top" id="r_top">
+                <div class="c-title">新闻列表</div>
+            </div>
+            <div id="r-wrap">
+                <!-- 增加新闻页面 -->
+                <div id="addNew" style="display: none;">
+                    <div id="add-wrap">
+                        <h3>新增新闻信息</h3>
+                        <input type="hidden" value="add" name="action"/>
+                        <table>
+                            <tr>
+                                <td>新闻标题</td>
+                                <td><input style="width:300px;height:30px" type="text" name="newstitle" id="newstitle"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>新闻图片地址</td>
+                                <td><input type="text" style="width:300px;height:30px" name="newsimg" id="newsimg"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>新闻内容</td>
+                                <td><textarea style="width:300px;height:200px" name="newscontent"
+                                              id="newscontent"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td>添加栏目</td>
+                                <td style="text-align:left;">
+                                    <select name="lanmu" id="lanmu">
+                                        <option name="tuijian" value="tuijian">推荐</option>
+                                        <option name="baijia" value="baijia">百家</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td>
+                                    <input style="width:100px;height:30px;font-size: 18px;" type="submit" value="添加"
+                                           id="add"/>
+                                    <input style="width:100px;height:30px;font-size: 18px;" type="reset" value="重置"/>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <!--修改新闻页面-->
+                <div id="modify-wrap" style="display: none;">
+                    <h3>修改新闻信息</h3>
+                    <input type="hidden" value="add" name="action"/>
+                    <table>
+                        <input type="hidden" name="newsid" id="newsid1"/>
+                        <tr>
+                            <td>新闻标题</td>
+                            <td><input style="width:300px;height:30px" type="text" name="newstitle" id="newstitle1"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>新闻图片地址</td>
+                            <td><input type="text" style="width:300px;height:30px" name="newsimg" id="newsimg1"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>新闻内容</td>
+                            <td><textarea style="width:300px;height:200px" name="newscontent"
+                                          id="newscontent1"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td>添加栏目</td>
+                            <td style="text-align:left;">
+                                <select name="lanmu" id="lanmu1">
+                                    <option name="tuijian" value="tuijian">推荐</option>
+                                    <option name="baijia" value="baijia">百家</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>
+                                <input style="width:100px;height:30px;font-size: 18px;" type="submit" value="修改"
+                                       id="modify"/>
+                                <input style="width:100px;height:30px;font-size: 18px;" type="button" value="取消"
+                                       id="cancel"/>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!--新闻列表-->
+                <div id="show-wrap">
+                    <table border="2">
+                        <tr>
+                            <th width="30">ID</th>
+                            <th width="100">分类</th>
+                            <th width="200">新闻标题</th>
+                            <th width="160">新闻图片</th>
+                            <th width="370">新闻内容</th>
+                            <th width="110">添加时间</th>
+                            <th width="120">操作</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

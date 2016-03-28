@@ -1,0 +1,493 @@
+/*初始化*/
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+body, button, input, select, textarea {
+    font: 14px/1.5 arial, \5b8b\4f53;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+fieldset, img {
+    border: 0;
+}
+
+li {
+    box-sizing: border-box;
+}
+
+/*global*/
+body {
+    width: 100%;
+    text-align: center;
+    color: #000;
+}
+
+/*头部*/
+.head {
+    width: 100%;
+}
+
+.head, .head a {
+    color: #999;
+}
+
+.weather ul {
+    line-height: 60px;
+    margin-left: 80px;
+}
+
+.head li {
+    display: inline-block;
+}
+
+.head .toptools {
+    width: 1190px;
+    height: 60px;
+    margin: 0 auto;
+}
+
+.toptools > .hao123-logo {
+    float: left;
+    width: 192px;
+    height: 60px;
+}
+
+.toptools > .weather {
+    float: left;
+}
+
+/*天气*/
+.weather .date {
+    text-align: center;
+    margin-left: 10px;
+    width: 114px;
+    height: 60px;
+}
+
+.weather .wea-arrow {
+    display: inline-block;
+    width: 9px;
+    height: 6px;
+    background: url('images/index_widthlg.png') no-repeat -52px -97px;
+    vertical-align: middle;
+}
+
+.weather span.icon-wea {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
+    background-image: url("images/a0.png");
+}
+
+.weather > ul > li > a {
+    padding-right: 10px;
+}
+
+/*登录*/
+.tools-login {
+    float: right;
+    height: 60px;
+    padding: 0 230px 0 0;
+}
+
+.tools-login ul {
+
+}
+
+.tools-login li {
+    line-height: 60px;
+    padding-left: 33px;
+    color: #999;
+    background-image: url('images/index_widthlg.png');
+    background-repeat: no-repeat;
+    background-position: -30px -110px;
+    cursor: pointer;
+}
+
+.tools-login li:nth-child(2) {
+    background-position: -96px -108px;
+}
+
+.tools-login li:nth-child(3) {
+    background-position: -162px -109px;
+}
+
+.tools-login li:nth-child(4) {
+    background-position: -244px -108px;
+}
+/*设置鼠标滑过样式*/
+.tools-login ul li:hover{
+    color: #000;
+}
+.baidu-search-wr {
+    width: 1190px;
+    margin: 0 auto;
+}
+
+/*搜索框*/
+.search {
+    height: 41px;
+    padding: 42px 0 0 166px;
+}
+
+.left-logo {
+    float: left;
+    margin-right: 20px;
+}
+
+.right-input-wr {
+    float: left;
+    width: 660px;
+    height: 40px;
+    margin-top: -3px;
+
+}
+
+.right-input-wr form {
+    display: -webkit-flex;
+    width: 660px;
+}
+
+.right-input-wr .ser-ipt {
+    flex: 1;
+    height: 38px;
+    border: 1px solid #999;
+    border-right: none;
+}
+
+.right-input-wr .sear-btn {
+    display: inline-block;
+    width: 120px;
+    height: 40px;
+}
+
+/*清除浮动*/
+.clearfix {
+    clear: both;
+}
+
+/*输入框下热搜*/
+.hot-search {
+    text-align: left;
+    margin-left: 130px;
+
+}
+
+.hot-search ul li {
+    margin-right: 20px;
+}
+
+.hot-search ul li.hot-title {
+    margin-right: 5px;
+}
+
+.hot-search ul li.hot-title a {
+    color: #090;
+}
+
+.hot-search-more {
+    margin-left: 10px;
+}
+
+.hot-search ul li.hot-search-more a {
+    color: #34a637
+}
+
+.hot-search ul li a {
+    font-size: 12px;
+    color: #666;
+}
+
+/*主体内容导航*/
+.con-wr {
+    width: 1190px;
+    overflow: hidden;
+    margin: 40px auto 0;
+}
+
+.con-wr a {
+    color: #333;
+}
+
+.con-banner {
+    border: 0;
+    width: 1190px;
+    height: 38px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.con-banner ul {
+    width: 1190px;
+    height: 38px;
+    border-top: 2px solid #099e6a;
+    border-bottom: 1px solid #eaeaea;
+    background-color: #fcfcfc;
+    box-sizing: border-box;
+}
+
+.con-banner ul li {
+    height: 38px;
+    line-height: 38px;
+    width: 110px;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    font-size: 16px;
+}
+
+.con-banner ul li a {
+    display: block;
+    height: 38px;
+    line-height: 38px;
+    background-color: #0aa770;
+    cursor: pointer;
+    color: #fff;
+    position: relative;
+}
+
+.spilt {
+    position: absolute;
+    left: 107px;
+    color: #ccc;
+}
+
+.con-banner ul li.first {
+    width: 90px;
+}
+
+.first-spilt {
+    position: absolute;
+    left: 87px;
+    color: #ccc;
+}
+
+/*主题内容*/
+.content {
+    margin-top: 10px;
+}
+
+.left-con {
+    display: inline-block;
+    width: 278px;
+    background-color: #fff;
+    vertical-align: top;
+    border: 1px solid #999;
+    margin-right: 12px;
+}
+
+.main-con {
+    display: inline-block;
+    width: 868px;
+    padding-left: 23px;
+    padding-top: 11px;
+    border: 1px solid #a9dcba;
+}
+
+.item-2 ul {
+    width: 260px;
+    padding: 9px 0 10px 18px;
+    text-align: left;
+
+}
+
+.item-2 ul li {
+    display: inline-block;
+    width: 126px;
+    height: 30px;
+    position: relative;
+    padding-left: 20px;
+}
+
+/*左侧导航icon*/
+.icon-startbar {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: url('https://gss1.bdstatic.com/5eN1dDebRNRTm2_p8IuM_a/v5/Hz/mn/Ev/BX/8z/2/index_menus_widthlg.png') no-repeat;
+    left: -4px;
+    top: 0;
+}
+
+.i-tv {
+    background-position: -20px -81px;
+}
+
+.i-game {
+    background-position: -19px -301px;
+}
+
+.i-movie {
+    background-position: -20px -160px;
+}
+
+.i-comic {
+    background-position: -20px -381px;
+}
+
+.i-news {
+    background-position: -20px -100px;
+}
+
+.i-travel {
+    background-position: -20px -261px;
+}
+
+.i-caipiao {
+    background-position: -20px -21px;
+}
+
+.i-novel {
+    background-position: -20px -121px;
+}
+
+.i-sale {
+    background-position: -20px -281px;
+}
+
+.i-teach {
+    background-position: -20px -362px;
+}
+
+/*主体内容右侧*/
+.hot-site {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #aaa;
+}
+
+.hot-site ul li {
+    display: inline-block;
+    width: 130px;
+    height: 20px;
+    line-height: 20px;
+    padding: 6px 0 4px 9px;
+    margin-right: 4px;
+    position: relative;
+    text-align: left;
+    font-size: 14px;
+}
+
+.hot-site ul li span,.normal-site-link ul li span {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/*主体链接icon*/
+.icon-miansite {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: url(images/defaultIcon1229.png) no-repeat 2px -198px;
+    top: 7px;
+    left: -15px;
+}
+
+.i-xina {
+    background-position: 2px -278px;
+}
+
+.i-souhu {
+    background-position: 2px -318px;
+}
+
+.i-tencent {
+    background-position: 2px -38px;
+}
+
+.i-wangyi {
+    background-position: 2px -157px;
+}
+
+.i-aqy {
+    background: url("images/1821.png") no-repeat;
+}
+
+.i-tmall {
+    background: url("images/tianmao2015082101.gif") no-repeat -4px -6px;
+}
+
+.i-fhw {
+    background-position: 2px -238px;
+}
+
+.i-taobao {
+    background-position: 2px -358px;
+}
+
+.i-freegame {
+    background: url("images/game0331.png") no-repeat;
+}
+
+.i-4399 {
+    background-position: 2px 2px;
+}
+
+.i-xinhua {
+    background: url("images/10435.png") no-repeat;
+}
+
+.i-jd {
+    background: url("images/21.1.png") no-repeat;
+}
+
+.i-ju {
+    background: url("images/8.411.png") no-repeat;
+}
+
+.i-jrtj {
+    background: url("images/6282.png") no-repeat;
+}
+
+.i-haomv {
+    background: url("images/1419388771.png") no-repeat;
+}
+
+.i-carhome {
+    background-position: 0px -520px;
+}
+
+.i-gotowhere {
+    background: url("images/2554.png") no-repeat;
+}
+
+.normal-site-link {
+    padding-top: 15px;
+}
+
+.normal-site-link ul {
+    margin-left: -30px;
+}
+
+.normal-site-link ul li {
+    display: inline-block;
+    text-align: left;
+    width: 130px;
+    padding-top: 6px;
+    padding-bottom: 4px;
+    margin-right: 4px;
+    padding-left: 9px;
+    position: relative;
+}
+
+#normalSite .color {
+    color: #118750;
+}

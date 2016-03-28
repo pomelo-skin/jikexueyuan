@@ -1,0 +1,388 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: pointer;
+    color: #cc0000;
+}
+
+body {
+    font-size: 12px;
+    font-family: "Microsoft YaHe", "宋体", sans-serif;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    min-width: 1200px;
+    width: 100%;
+}
+
+.nav-line {
+    width: 100%;
+    height: 3px;
+    background-color: #cc0000;
+}
+
+/*导航栏*/
+.nav {
+    width: 1200px;
+    height: 81px;
+    margin: 0 auto;
+}
+
+.nav .logo {
+    height: 81px;
+    float: left;
+    text-align: center;
+}
+
+.nav .logo img {
+    margin-top: 18px;
+}
+
+.nav-title {
+    line-height: 81px;
+    float: right;
+    margin-right: 40px;
+}
+
+ul {
+    list-style: none;
+}
+
+.nav-title .nav-title-list li {
+    float: left;
+    text-align: center;
+}
+
+.nav-title .nav-title-list li a {
+    display: block;
+    text-decoration: none;
+    color: #111;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.nav-title .nav-title-list li.active {
+    background-color: #cc0000;
+}
+
+.nav-title .nav-title-list li.active a {
+    color: #fff;
+}
+
+.nav-title .nav-title-list li a:hover {
+    color: #fff;
+    background-color: #cc0000;
+}
+
+/*动态图片轮播*/
+.banner {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.image-group img {
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.banner p {
+    display: block;
+    width: 600px;
+    height: 40px;
+    font-size: 2em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -20px;
+    margin-left: -300px;
+    z-index: 3;
+    color: #fff;
+}
+
+/*内容主体*/
+.content-top {
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.content-head h3 {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+.content-head h2 {
+    font-size: 2.5em;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.business, .office {
+    /*background-color: blueviolet;*/
+    text-align: left;
+    float: left;
+    margin-bottom: 22px;
+}
+
+.public, .housing {
+    /*background-color: blueviolet;*/
+    text-align: left;
+    float: right;
+    margin-bottom: 22px;
+}
+
+.cat-brand i {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background: url("../images/icon.png") -10px -10px no-repeat;
+    vertical-align: top;
+}
+
+.business i {
+    background-position: -10px -230px;
+}
+
+.public i {
+    background-position: -10px -120px;
+}
+
+.office i {
+    background-position: -10px -340px;
+}
+
+.business-title, .public-title, .office-title, .housing-title {
+    display: inline-block;
+    width: 334px;
+    margin: 14px 0 14px 18px;
+    /*background-color: #F65A5B;*/
+}
+
+.cat-brand h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.cat-brand p {
+    display: block;
+    width: 334px;
+    line-height: 22px;
+}
+
+/*项目实例*/
+.projects {
+    clear: left;
+    width: 100%;
+    height: 442px;
+    background-color: #eff1f3;
+    text-align: center;
+    position: relative;
+}
+
+.projects h2 {
+    font-size: 30px;
+    padding-top: 20px;
+}
+
+.projects .projects-subtitle {
+    font-size: 14px;
+    padding: 15px 0;
+}
+
+.projects-images {
+    /*width: 1000px;*/
+    margin: 20px auto;
+}
+
+.project1 {
+    display: inline-block;
+}
+
+.project2, .project3, .project4 {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.projects-images p {
+    font-size: 14px;
+    margin-top: 28px;
+}
+
+.page_switch {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    margin-left: -29px;
+}
+
+.page_switch a {
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+}
+
+.page_switch img.front {
+    margin-right: 10px;
+}
+
+.page_switch img.next {
+    margin-left: 10px;
+}
+
+.page_switch a:hover {
+
+}
+
+/*新闻动态*/
+.news {
+    width: 100%;
+    background-color: #eef0f2;
+}
+
+.news-wrapper {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.news-left {
+    width: 580px;
+    text-align: left;
+    display: inline-block;
+}
+
+.news-left h2 {
+    font-size: 20px;
+    padding: 20px 0;
+    display: inline-block;
+}
+
+.news-left a.more {
+    display: inline-block;
+    font-size: 14px;
+    color: #676767;
+}
+
+.news-list li {
+    margin-bottom: 30px;
+    line-height: 22px;
+}
+
+.news-list li a {
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.news-line {
+    display: inline-block;
+    width: 1px;
+    height: 175px;
+    background-color: #ababab;
+}
+
+.news-right {
+    display: inline-block;
+    width: 360px;
+    margin-left: 40px;
+}
+
+.news-right ul li {
+    line-height: 2.17em;
+}
+
+.news-right h1 {
+    margin: 20px 0;
+}
+
+.leave-mes-btn {
+    display: block;
+    width: 123px;
+    height: 43px;
+    background: url("../images/leaveMesBtn.gif") top left no-repeat;
+    border-style: none;
+}
+
+/*footer*/
+.footer {
+    clear: left;
+    background-color: #222;
+}
+
+.footer .links {
+    background-color: #222;
+    width: 1000px;
+    height: 200px;
+    margin: 0 auto;
+    color: #c7c7c7;
+    text-align: left;
+}
+
+.footer .links h3 {
+    color: #fff;
+    margin: 30px 0 20px;
+}
+
+.footer .links li {
+    line-height: 22px;
+}
+
+.footer .links td {
+    width: 180px;
+}
+
+.footer .links td.link-logo {
+    width: 320px;
+}
+
+div.footer-logo {
+    text-align: center;
+    margin-left: -100px;
+}
+
+/*联系我们*/
+.links-contact img {
+    vertical-align: bottom;
+}
+
+.footer .footBottom {
+    height: 44px;
+    background-color: #000;
+    color: #a4a4a4;
+    text-align: center;
+}
+
+.footer .footBottom p {
+    padding-top: 16px;
+}
+
+.red-color {
+    color: #cc0000;
+}
+
+.footer .links h3.red-color {
+    color: #cc0000;
+}
+
+
+
+
+
+
+
+
+
+
+
+

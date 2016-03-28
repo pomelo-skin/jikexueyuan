@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: #f9d1c6;
+    -webkit-box-shadow: inset 0 0 300px #4bc511;
+}
+
+#stage {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    top: 50%;
+    left: 50%;
+    /*舞台视距*/
+    /*perspective: 600px;*/
+}
+
+#container {
+    width: 180px;
+    height: 180px;
+    position: relative;
+    left: -50%;
+    top: -50%;
+    -webkit-transform-style: preserve-3d;
+    /*-webkit-transform:rotateY(90deg);*/
+    -webkit-transform-origin: center center;
+}
+
+.animation_rotate {
+    -webkit-animation: rotateAni 5s ease-out forwards 2s;
+}
+
+/*动画样式*/
+@-webkit-keyframes rotateAni {
+    0% {
+        -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    25% {
+        -webkit-transform: rotateX(0deg) rotateY(-90deg) rotateZ(0deg);
+    }
+    50% {
+        -webkit-transform: rotateX(90deg) rotateY(-90deg) rotateZ(0deg);
+    }
+    75% {
+        -webkit-transform: rotateX(180deg) rotateY(-90deg) rotateZ(0deg);
+    }
+    85% {
+        -webkit-transform: rotateX(270deg) rotateY(-90deg) rotateZ(0deg);
+    }
+    100% {
+        -webkit-transform: rotateX(180deg) rotateY(0deg) rotateZ(0deg);
+    }
+
+}
+
+/*极客学院图标动画*/
+.scale_animation {
+    /*-webkit-animation: scaliAni 0.5s ease-in;*/
+    -webkit-animation: scaleAni 1s 2 ease-in-out;
+}
+
+@-webkit-keyframes scaleAni {
+    0% {
+        -webkit-transform: scale(1);
+    }
+    50% {
+        -webkit-transform: scale(1.3);
+    }
+    100% {
+        -webkit-transform: scale(1);
+    }
+}
+
+.translateAni {
+    -webkit-animation: translateAni 0.5s 3 ease-in-out backwards 7s;
+}
+
+@-webkit-keyframes translateAni {
+    0% {
+        -webkit-transform: translate(-58px, -58px);
+    }
+    35% {
+        -webkit-transform: translate(58px, -58px);
+    }
+    70% {
+        -webkit-transform: translate(58px, 58px);
+    }
+    100% {
+        -webkit-transform: translate(-58px, 58px);
+    }
+}
+
+.front, .back, .left, .right, .top, .bottom {
+    width: 180px;
+    height: 180px;
+    position: absolute;
+}
+
+/*前面*/
+#container .front {
+    background-color: #11e83d;
+    -webkit-transform: translateZ(90px);
+}
+
+/*后面样式*/
+#container .back {
+    background-color: #7061c8;
+    -webkit-transform: translateZ(-90px) rotateX(180deg);
+}
+
+/*左面样式*/
+#container .left {
+    background-color: #bc3890;
+    -webkit-transform: translateX(-90px) rotateY(-90deg) rotateZ(180deg);
+
+}
+
+/*右面样式*/
+#container .right {
+    background-color: #2a4aff;
+    -webkit-transform: translateX(90px) rotateY(90deg);
+}
+
+/*上面样式*/
+#container .top {
+    background-color: #fff;
+    -webkit-transform: translateY(-90px) rotateX(90deg) rotateZ(-90deg);
+}
+
+/*下面样式*/
+#container .bottom {
+    background-color: #dcfd22;
+    -webkit-transform: translateY(90px) rotateX(-90deg) rotateZ(90deg);
+}
+
+/*每一面的格线*/
+.front div, .back div, .left div, .right div, .top div, .bottom div {
+    float: left;
+    width: 58px;
+    height: 58px;
+    border: 1px solid #000000;
+    text-align: center;
+    line-height: 58px;
+}
+
+/*中心样式--开始*/
+.front5 {
+    background-color: #fff;
+}
+
+.right .right5 {
+    background-color: #fff;
+}
+
+.bottom .bottom5 {
+    background-color: #bc3890;
+}
+
+.top .top5 {
+    background-color: #2a4aff;
+}
+
+.left .left5 {
+    background-color: #dcfd22;
+}
+
+/*中心样式--结束*/

@@ -1,0 +1,78 @@
+body,ul,ol.li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,dl,dt,dd,input{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana,"Lantinghei SC","Hiragino Sans GB","Microsoft Yahei",Helvetica,arial,\5b8b\4f53,sans-serif;
+}
+em,i{
+    font-style: normal;
+}
+body{
+    font-size: 12px;
+}
+a,dd,div,dl,i,img,input,li,p,span,ul{
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6,strong{
+    /*font-weight: 400;*/
+}
+img{
+    border: none;
+}
+li{
+    list-style-type: none;
+}
+
+textarea{
+    resize: none;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+button{
+    border: 0 none;
+}
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*清除浮动*/
+.clearfix:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.clearfix{
+    zoom: 1;
+}
+.fl{
+    float: left;
+}
+.rl{
+    float: right;
+}
+.btn-search, .btn-product, .btn-modelopen, .btn-subscribe, .btn-baidu, .btn-back, .btn-home, .btn-dld, .btn-config, .btn-bigger, .btn-smaller, .btn-userhome, .ui-toolbar-func .btn-slide, .ui-footer-app-download span, .page-view-list-item-inner div:nth-child(2) span:nth-child(3), .page-view-share span, .ui-gotop span {
+    border: 0;
+    background-image: url(../img/bg-new-toolbar_6e9bc53.png);
+    background-size: 40px 500px;
+    -webkit-background-size: 40px 500px;
+    background-repeat: no-repeat;
+}
+.index-list-item .tip-topnews, .index-list-item .tip-hot, .index-list-item .tip-tag, .index-list-item .tip-recommend, .index-list-item .tip-tag, .index-list-item .tip-ad, .index-list-item .tip-topic, .index-list-item .tip-reason, .index-list-item .tip-contenttype, .index-list-item .tip-topic {
+    float: right;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    color: #fff;
+    padding: 1px 2px;
+    border-radius: 2px;
+    margin-top: 1px;
+    margin-left: 10px;
+    display: inline-block;
+    max-width: 100px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}

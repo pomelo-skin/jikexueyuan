@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div class="calculate">
+    <label for="numa">请输入数字1：</label>
+    <input type="text" id="numa">
+    <label for="numb">请输入数字2：</label>
+    <input type="text" id="numb">
+    <!--运算符-->
+    <label for="oper">请选择运算符：</label>
+    <select id="oper">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <!--确定按钮-->
+    <input type="button" id="equal" value="等于" onclick="calculate()">
+    <input type="text" id="result">
+</div>
+
+<script type="text/javascript" src="js.js"></script>
+</body>
+</html>

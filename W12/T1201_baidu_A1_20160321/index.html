@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <!--<link href="/styles/pc/reset.css" rel="stylesheet"/>-->
+    <!--<link href="/styles/pc/mystyle.css" rel="stylesheet"/>-->
+    <!--<script type="text/javascript" src="/JS/jquery-1.11.3.min.js"></script>-->
+    <link href="styles/pc/reset.css" rel="stylesheet"/>
+    <link href="styles/pc/mystyle.css" rel="stylesheet"/>
+    <script type="text/javascript" src="JS/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+<div class="wrapper" id="pc-baidu">
+    <div id="header">
+        <!--顶部导航-->
+        <!--top-->
+        <div id="top">
+            <div class="top-weater">
+                <div class="show-weather" id="show_weather">
+                    <span class="show-city">深圳：</span>
+                    <span class="show-icon">
+                        <span class="weater-icon"></span>
+                        <span class="show-icon-temp">10℃</span>
+                    </span>
+
+                    <div class="wea-widget">
+                        <IFRAME id="tianqi8_wetherinfo" name="tianqi8_wetherinfo"
+                                src="http://tq.ss256.com/code/freeweather1.htm?id=101280601&fcolor=&imgurl=tb/tbb/tb1&bimg=&bcolor=&fsize="
+                                frameBorder=0 width=468 height=60 ALIGN=CENTER MARGINWIDTH=0 MARGINHEIGHT=0 HSPACE=0
+                                VSPACE=0 SCROLLING=NO allowtransparency=true></IFRAME>
+                    </div>
+                </div>
+                <div class="show-pollution">
+                    <span class="show-airparm">
+                        <em class="show-pollution-name">优</em>
+                        <em class="show-pollution-num">40</em>
+                    </span>
+                    <span class="show-vertical">|</span>
+                </div>
+            </div>
+            <div class="s-icons" id="s_icons">
+                <a class="s-treasure" href="#" onclick="return false" title="宝箱">宝箱</a>
+                <a class="s-skin" href="#" onclick="return false" title="换肤">换肤</a>
+                <a class="s-msg" href="#" onclick="return false" title="消息">消息</a>
+            </div>
+            <ul class="menu">
+                <li><a href="http://www.nuomi.com/?cid=002540" class="mnav " target="_blank">糯米</a></li>
+                <li><a href="http://news.baidu.com" class="mnav " target="_blank">新闻</a></li>
+                <li><a href="http://www.hao123.com" class="mnav " target="_blank">hao123</a></li>
+                <li><a href="http://map.baidu.com" class="mnav " target="_blank">地图</a></li>
+                <li><a href="http://v.baidu.com" class="mnav " target="_blank">视频</a></li>
+                <li><a href="http://tieba.baidu.com" class="mnav " target="_blank">贴吧</a></li>
+                <li><a id="s_username_top" class="s-user-name-top mnav" href="http://i.baidu.com" target="_blank">
+                    <span class="user-name" id="user_name">蛋蛋呵呵88</span></a>
+
+                    <div class="user-menu bdpfmenu">
+                        <div class="bdnuarrow">
+                            <em></em>
+                            <i></i>
+                        </div>
+                        <div class="selectMenu">
+                            <ul>
+                                <li><a href="#">我的VIP</a></li>
+                                <li><a href="#">个人中心</a></li>
+                                <li><a href="#">账号设置</a></li>
+                                <li><a href="#">意见反馈</a></li>
+                                <li><a href="#">退出</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </li>
+                <li class="li-pf">
+                    <a href="http://www.baidu.com/gaoji/preferences.html" name="tj_settingicon" class="pf"
+                       id="pf">设置</a>
+
+                    <div class="bdpfmenu set-menu" id="bdpfmenu">
+                        <!--下拉菜单小箭头-->
+                        <div class="bdnuarrow">
+                            <em></em>
+                            <i></i>
+                        </div>
+                        <!--下拉菜单-->
+                        <ul class="selectMenu">
+                            <li><a class="setpref" href="javascript:;">搜索设置</a></li>
+                            <li><a href="//www.baidu.com/gaoji/advanced.html" target="_blank">高级搜索</a></li>
+                            <li><a href="javascript:;">关闭预测</a></li>
+                            <li><a href="javascript:;">搜索历史</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="http://www.baidu.com/more/" class="more" id="more">更多产品</a></li>
+            </ul>
+        </div>
+
+        <!--更多产品下拉菜单-->
+        <div class="bdbri">
+            <div class="bdmainlink">
+                <div class="bdbriimgtitle">更多产品</div>
+            </div>
+            <div class="bdbriwrappercontainer">
+                <ul class="bdbriwrapper">
+                    <li><a href="http://music.baidu.com">
+                        <span class="bdbriimgitem_3"></span>
+                        音乐
+                    </a></li>
+                    <li><a href="http://image.baidu.com">
+                        <span class="bdbriimgitem_4"></span>
+                        图片
+                    </a></li>
+                    <li><a href="http://zhidao.baidu.com">
+                        <span class="bdbriimgitem_2"></span>
+                        知道
+                    </a></li>
+                    <li><a href="http://wenku.baidu.com">
+                        <span class="bdbriimgitem_5"></span>
+                        文库
+                    </a></li>
+                    <li><a href="http://top.baidu.com">
+                        <span class="bdbriimgitem_6"></span>
+                        风云榜
+                    </a></li>
+                    <li><a href="http://e.baidu.com/?refer=888">
+                        <span class="bdbriimgitem_7"></span>
+                        知道
+                    </a></li>
+                    <li class="bdbrievenmore">
+                        <a href="//www.baidu.com/more/" name="tj_more">全部产品&gt;&gt;</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <!--end top-->
+        <div id="s_form">
+            <div class="s_form_wr">
+                <div id="logo">
+                    <img src="/images/bd_logo2.png" alt="百度Logo"/>
+                </div>
+                <form action="http://www.baidu.com" method="post" class="bdform">
+                <span class="s_ipt_wr">
+                    <label for="submit"><input type="text" class="s-input "/></label>
+                </span>
+                <span class="s_btn_wr">
+                    <input type="submit" value="百度一下" class="s-btn" id="submit"/>
+                </span>
+                </form>
+            </div>
+        </div>
+        <!--我的关注选项卡-->
+        <div id="s_wrap" class="s-isindex-wrap">
+            <div id="s_main" class="main">
+                <div id="s_mancard_main" class="s-mancard-main">
+                    <!--选项卡title-->
+                    <div class="s-menu-container">
+                        <div class="mine-text-wr s-menu-item" id="mine_text_wr">
+                            <span class="mine-icon"></span>
+                            <span class="mine-text">我的关注</span>
+                        </div>
+                        <div class="s-menus-wr" id="s_menus_wr">
+                            <span class="menu-text s-menu-item current">推荐</span>
+                            <span class="menu-text s-menu-item">导航</span>
+                            <span class="menu-text s-menu-item">视频</span>
+                            <span class="menu-text s-menu-item">购物</span>
+                        </div>
+                        <div class="s-menu-set">
+                            <span class="menu-icon"></span>
+                        </div>
+                    </div>
+                </div>
+                <div id="s_ctner_contents" class="s-ctner-contents">
+                    <!--选项卡一：我的关注-->
+                    <div class="s-content" id="s_content_1">
+                        <div class="s-content-load">
+                            <img src="/images/loading_72b1da62.gif" alt=""/>
+
+                            <p>加载中，精彩马上呈现</p>
+                        </div>
+                    </div>
+                    <!--选项卡二：推荐-->
+                    <div id="s_content_2" class="s-content">
+                        <div class="s-news-wrapper">
+                            <!--右侧实时热点-->
+                            <div class="s-news-rank-wrapper">
+                                <div class="s-rank-title">
+                                    <div class="title-text">
+                                        <a href="http://top.baidu.com/?fr=mhd_card" target="_blank">实时热点</a>
+                                    </div>
+                                    <a class="hot-refresh">
+                                        <span class="hot-refresh-icon"></span>
+                                        <span class="hot-refresh-text">换一换</span>
+                                    </a>
+                                </div>
+                                <!--实时热点列表-->
+                                <ul class="s-news-rank-content">
+                                    <li class="news-meta-item news-artist" data-index="0">
+                                        <em class="news-icon"></em>
+                                        <span class="news-title">
+                                            <a class="title-content" href="#" target="_blank">搏击高手云集洛阳</a>
+                                            <span class="new-identity"></span>
+                                        </span>
+                                    </li>
+                                    <li class="news-meta-item news-artist" data-index="1">
+                                        <em class="news-icon"></em>
+                                        <span class="news-title">
+                                            <a class="title-content" href="#" target="_blank">最丑蜡像再开馆</a>
+                                            <span class="new-identity"></span>
+                                        </span>
+                                    </li>
+                                    <li class="news-meta-item news-artist" data-index="2">
+                                        <em class="news-icon"></em>
+                                        <span class="news-title">
+                                            <a class="title-content" href="#" target="_blank">清华大学爆炸</a>
+                                                 <span class="new-identity"></span>
+                                        </span>
+                                    </li>
+                                    <li class="news-meta-item news-artist" data-index="3">
+                                        <em class="news-icon"></em>
+                                        <span class="news-title">
+                                            <a class="title-content" href="#" target="_blank">女孩刷牙吞入牙刷</a>
+                                             <span class="new-identity"></span>
+                                        </span>
+                                    </li>
+                                    <li class="news-meta-item news-artist" data-index="4">
+                                        <em class="news-icon"></em>
+                                        <span class="news-title">
+                                            <a class="title-content" href="#" target="_blank">比赛爆胎扛车完赛</a>
+                                             <span class="new-identity"></span>
+                                        </span>
+                                    </li>
+                                    <li class="news-meta-item news-artist" data-index="5">
+                                        <em class="news-icon"></em>
+                                        <span class="news-title">
+                                            <a class="title-content" href="#" target="_blank">比赛爆胎扛车完赛</a>
+                                        </span>
+                                    </li>
+                                    <li class="news-meta-item news-artist" data-index="6">
+                                        <em class="news-icon"></em>
+                                        <span class="news-title">
+                                            <a class="title-content" href="#" target="_blank">比赛爆胎扛车完赛</a>
+                                        </span>
+                                    </li>
+                                    <li class="news-meta-item news-artist" data-index="7">
+                                        <em class="news-icon"></em>
+                                        <span class="news-title">
+                                            <a class="title-content" href="#" target="_blank">比赛爆胎扛车完赛</a>
+                                        </span>
+                                    </li>
+                                    <li class="news-meta-item news-artist" data-index="8">
+                                        <em class="news-icon"></em>
+                                        <span class="news-title">
+                                            <a class="title-content" href="#" target="_blank">比赛爆胎扛车完赛</a>
+                                        </span>
+                                    </li>
+                                    <li class="news-meta-item news-artist" data-index="9">
+                                        <em class="news-icon"></em>
+                                        <span class="news-title">
+                                            <a class="title-content" href="#" target="_blank">30万穷游90国</a>
+                                        </span>
+                                    </li>
+                                    <li class="news-meta-item news-artist" data-index="10">
+                                        <em class="news-icon"></em>
+                                        <span class="news-title">
+                                            <a class="title-content" href="#" target="_blank">俄总理接见黄晓明</a>
+                                        </span>
+                                    </li>
+                                    <li class="news-meta-item news-artist" data-index="11">
+                                        <em class="news-icon"></em>
+                                        <span class="news-title">
+                                            <a class="title-content" href="#" target="_blank">刘雯默认恋情</a>
+                                        </span>
+                                    </li>
+                                    <li class="news-meta-item news-artist" data-index="12">
+                                        <em class="news-icon"></em>
+                                        <span class="news-title">
+                                            <a class="title-content" href="#" target="_blank">琼瑶诉于正案获胜</a>
+                                        </span>
+                                    </li>
+                                    <li class="news-meta-item news-artist" data-index="13">
+                                        <em class="news-icon"></em>
+                                        <span class="news-title">
+                                            <a class="title-content" href="#" target="_blank">巴西真人芭比走红</a>
+                                        </span>
+                                    </li>
+                                    <li class="news-meta-item news-artist" data-index="14">
+                                        <em class="news-icon"></em>
+                                        <span class="news-title">
+                                            <a class="title-content" href="#" target="_blank">谭维维公开致歉</a>
+                                        </span>
+                                    </li>
+                                    <li class="news-meta-item news-artist" data-index="15">
+                                        <em class="news-icon"></em>
+                                        <span class="news-title">
+                                            <a class="title-content" href="#" target="_blank">乐嘉称华少虚伪</a>
+                                        </span>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <!--左侧兴趣推荐-->
+                            <div class="news-flash-tips">
+                                <div class="left-line"></div>
+                                <div class="content-tips">
+                                    <div class="tips-icon"></div>
+                                    <span>以下信息根据您的兴趣推荐</span>
+                                </div>
+                                <div class="right-line"></div>
+                            </div>
+                            <!--左侧热点详情-->
+                            <div class="s-news-content-detail">
+                                <div class="s-news-item">
+                                    <div class="s-text-content">
+                                        <h2>
+                                            <a href="http://news.cnr.cn/native/gd/20151218/t20151218_520837287.shtml"
+                                               title="郑州：老两口蜗居5米井下 50平米家电齐全" target="_blank"
+                                               data-title="郑州：老两口蜗居5米井下 50平米家电齐全"
+                                               data-link="http://news.cnr.cn/native/gd/20151218/t20151218_520837287.shtml"
+                                               data-click="LOG_LINK" class="s-yahei">
+                                                <span class="status prefix-0"></span> 郑州：老两口蜗居5米井下 50平米家电齐全</a>
+                                        </h2>
+                                    </div>
+                                    <div class="s-pic-content">
+                                        <ul class="s-news-content-imgs">
+                                            <li class="item-img-wrap">
+                                                <a href="http://news.cnr.cn/native/gd/20151218/t20151218_520837287.shtml"
+                                                   target="_blank" data-click="LOG_LINK" title="郑州：老两口蜗居5米井下 50平米家电齐全"
+                                                   data-title="郑州：老两口蜗居5米井下 50平米家电齐全">
+                                                    <img class="s-news-img"
+                                                         src="/images/u=2983808803,3239399606&fm=80.jpg"
+                                                         height="106" width="176">
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="form">
+                                        <span class="src-net">
+                                            <a href="http://news.cnr.cn" target="_blank" data-click="LOG_LINK"
+                                               data-src="1">央广网</a>
+                                        </span>
+                                        <span class="src-time">12-18 09:04</span>
+                                    </div>
+                                    <!--右上角删除-->
+                                    <div class="dustbin" data-click="LOG_BTN_DUSTBN"></div>
+                                </div>
+                                <div class="s-news-item s-news-item-tpl-1">
+                                    <h2>
+                                        <span class="status"></span>
+                                        <a href="http://news.163.com/15/1218/08/BB3T63TE00014AEE.html"
+                                           title="月薪过万美女辞职后种地 田间抚琴作画" target="_blank"
+                                           data-title="月薪过万美女辞职后种地 田间抚琴作画"
+                                           data-link="http://news.163.com/15/1218/08/BB3T63TE00014AEE.html"
+                                           data-click="LOG_LINK" class="s-yahei">
+                                            月薪过万美女辞职后种地 田间抚琴作画</a>
+                                    </h2>
+
+                                    <div class="s-pic-content">
+                                        <ul class="s-news-content-imgs">
+                                            <li class="item-img-wrap">
+                                                <a href="http://news.163.com/15/1218/08/BB3T63TE00014AEE.html"
+                                                   target="_blank" data-click="LOG_LINK" title="月薪过万美女辞职后种地 田间抚琴作画"
+                                                   data-title="月薪过万美女辞职后种地 田间抚琴作画">
+                                                    <img class="s-news-img"
+                                                         src="/images/u=328065679,2461192947&fm=80.jpg"
+                                                         height="106" width="176">
+                                                </a>
+                                            </li>
+                                            <li class="item-img-wrap">
+                                                <a href="http://news.163.com/15/1218/08/BB3T63TE00014AEE.html"
+                                                   target="_blank" data-click="LOG_LINK" title="月薪过万美女辞职后种地 田间抚琴作画"
+                                                   data-title="月薪过万美女辞职后种地 田间抚琴作画">
+                                                    <img class="s-news-img"
+                                                         src="/images/u=419661442,2713304435&fm=80.jpg" height="106"
+                                                         width="176">
+                                                </a>
+                                            </li>
+                                            <li class="item-img-wrap">
+                                                <a href="http://news.163.com/15/1218/08/BB3T63TE00014AEE.html"
+                                                   target="_blank" data-click="LOG_LINK" title="月薪过万美女辞职后种地 田间抚琴作画"
+                                                   data-title="月薪过万美女辞职后种地 田间抚琴作画">
+                                                    <img class="s-news-img"
+                                                         src="/images/u=419661442,2713304435&fm=80.jpg" height="106"
+                                                         width="176">
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="form">
+                                        <span class="src-net">
+                                            <a href="http://news.cnr.cn" target="_blank" data-click="LOG_LINK"
+                                               data-src="1">央广网</a>
+                                        </span>
+                                        <span class="src-time">12-18 09:04</span>
+                                    </div>
+                                    <!--右上角删除-->
+                                    <div class="dustbin" data-click="LOG_BTN_DUSTBN"></div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!--选项卡三：导航-->
+                    <div id="s_content_3" class="s-content">
+                        <div class="s-nav-area">
+                            <h1>猜你喜欢</h1>
+
+                            <div class="nav-item">
+                                <a href="#" target="_blank" title="百度糯米" class="nav-block">
+                                    <img src="/images/9483.png"/>
+                                    <span class="nav-txt">百度糯米</span>
+                                </a>
+
+                                <div class="rebate">
+                                    <a href="#" target="_blank">最高返利3.54%</a>
+                                </div>
+                                <div class="fanli-tag">
+                                    <a href="#" target="_blank"></a>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <a href="#" target="_blank" title="百度糯米" class="nav-block">
+                                    <img src="/images/9483.png"/>
+                                    <span class="nav-txt">百度糯米</span>
+                                </a>
+
+                                <div class="rebate">
+                                    <a href="#" target="_blank">最高返利3.54%</a>
+                                </div>
+                                <div class="fanli-tag">
+                                    <a href="#" target="_blank"></a>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <a href="#" target="_blank" title="百度糯米" class="nav-block">
+                                    <img src="/images/9483.png"/>
+                                    <span class="nav-txt">百度糯米</span>
+                                </a>
+
+                                <div class="rebate">
+                                    <a href="#" target="_blank">最高返利3.54%</a>
+                                </div>
+                                <div class="fanli-tag">
+                                    <a href="#" target="_blank"></a>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <a href="#" target="_blank" title="百度糯米" class="nav-block">
+                                    <img src="/images/9483.png"/>
+                                    <span class="nav-txt">百度糯米</span>
+                                </a>
+
+                                <div class="rebate">
+                                    <a href="#" target="_blank">最高返利3.54%</a>
+                                </div>
+                                <div class="fanli-tag">
+                                    <a href="#" target="_blank"></a>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <a href="#" target="_blank" title="百度糯米" class="nav-block">
+                                    <img src="/images/9483.png"/>
+                                    <span class="nav-txt">百度糯米</span>
+                                </a>
+
+                                <div class="rebate">
+                                    <a href="#" target="_blank">最高返利3.54%</a>
+                                </div>
+                                <div class="fanli-tag">
+                                    <a href="#" target="_blank"></a>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <a href="#" target="_blank" title="百度糯米" class="nav-block">
+                                    <img src="/images/9483.png"/>
+                                    <span class="nav-txt">百度糯米</span>
+                                </a>
+
+                                <div class="rebate">
+                                    <a href="#" target="_blank">最高返利3.54%</a>
+                                </div>
+                                <div class="fanli-tag">
+                                    <a href="#" target="_blank"></a>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <a href="#" target="_blank" title="百度糯米" class="nav-block">
+                                    <img src="/images/9483.png"/>
+                                    <span class="nav-txt">百度糯米</span>
+                                </a>
+
+                                <div class="rebate">
+                                    <a href="#" target="_blank">最高返利3.54%</a>
+                                </div>
+                                <div class="fanli-tag">
+                                    <a href="#" target="_blank"></a>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <a href="#" target="_blank" title="百度糯米" class="nav-block">
+                                    <img src="/images/9483.png"/>
+                                    <span class="nav-txt">百度糯米</span>
+                                </a>
+
+                                <div class="rebate">
+                                    <a href="#" target="_blank">最高返利3.54%</a>
+                                </div>
+                                <div class="fanli-tag">
+                                    <a href="#" target="_blank"></a>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <a href="#" target="_blank" title="百度糯米" class="nav-block">
+                                    <img src="/images/9483.png"/>
+                                    <span class="nav-txt">百度糯米</span>
+                                </a>
+
+                                <div class="rebate">
+                                    <a href="#" target="_blank">最高返利3.54%</a>
+                                </div>
+                                <div class="fanli-tag">
+                                    <a href="#" target="_blank"></a>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <a href="#" target="_blank" title="百度糯米" class="nav-block">
+                                    <img src="/images/9483.png"/>
+                                    <span class="nav-txt">百度糯米</span>
+                                </a>
+
+                                <div class="rebate">
+                                    <a href="#" target="_blank">最高返利3.54%</a>
+                                </div>
+                                <div class="fanli-tag">
+                                    <a href="#" target="_blank"></a>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <a href="#" target="_blank" title="百度糯米" class="nav-block">
+                                    <img src="/images/9483.png"/>
+                                    <span class="nav-txt">百度糯米</span>
+                                </a>
+
+                                <div class="rebate">
+                                    <a href="#" target="_blank">最高返利3.54%</a>
+                                </div>
+                                <div class="fanli-tag">
+                                    <a href="#" target="_blank"></a>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <a href="#" target="_blank" title="百度糯米" class="nav-block">
+                                    <img src="/images/9483.png"/>
+                                    <span class="nav-txt">百度糯米</span>
+                                </a>
+
+                                <div class="rebate">
+                                    <a href="#" target="_blank">最高返利3.54%</a>
+                                </div>
+                                <div class="fanli-tag">
+                                    <a href="#" target="_blank"></a>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <a href="#" target="_blank" title="百度糯米" class="nav-block">
+                                    <img src="/images/9483.png"/>
+                                    <span class="nav-txt">百度糯米</span>
+                                </a>
+
+                                <div class="rebate">
+                                    <a href="#" target="_blank">最高返利3.54%</a>
+                                </div>
+                                <div class="fanli-tag">
+                                    <a href="#" target="_blank"></a>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <a href="#" target="_blank" title="百度糯米" class="nav-block">
+                                    <img src="/images/9483.png"/>
+                                    <span class="nav-txt">百度糯米</span>
+                                </a>
+
+                                <div class="rebate">
+                                    <a href="#" target="_blank">最高返利3.54%</a>
+                                </div>
+                                <div class="fanli-tag">
+                                    <a href="#" target="_blank"></a>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <a href="#" target="_blank" title="百度糯米" class="nav-block">
+                                    <img src="/images/9483.png"/>
+                                    <span class="nav-txt">百度糯米</span>
+                                </a>
+
+                                <div class="rebate">
+                                    <a href="#" target="_blank">最高返利3.54%</a>
+                                </div>
+                                <div class="fanli-tag">
+                                    <a href="#" target="_blank"></a>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <a href="#" target="_blank" title="百度糯米" class="nav-block">
+                                    <img src="/images/9483.png"/>
+                                    <span class="nav-txt">百度糯米</span>
+                                </a>
+
+                                <div class="rebate">
+                                    <a href="#" target="_blank">最高返利3.54%</a>
+                                </div>
+                                <div class="fanli-tag">
+                                    <a href="#" target="_blank"></a>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <a href="#" target="_blank" title="百度糯米" class="nav-block">
+                                    <img src="/images/9483.png"/>
+                                    <span class="nav-txt">百度糯米</span>
+                                </a>
+
+                                <div class="rebate">
+                                    <a href="#" target="_blank">最高返利3.54%</a>
+                                </div>
+                                <div class="fanli-tag">
+                                    <a href="#" target="_blank"></a>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <a href="#" target="_blank" title="百度糯米" class="nav-block">
+                                    <img src="/images/9483.png"/>
+                                    <span class="nav-txt">百度糯米</span>
+                                </a>
+
+                                <div class="rebate">
+                                    <a href="#" target="_blank">最高返利3.54%</a>
+                                </div>
+                                <div class="fanli-tag">
+                                    <a href="#" target="_blank"></a>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <a href="#" target="_blank" title="百度糯米" class="nav-block">
+                                    <img src="/images/9483.png"/>
+                                    <span class="nav-txt">百度糯米</span>
+                                </a>
+
+                                <div class="rebate">
+                                    <a href="#" target="_blank">最高返利3.54%</a>
+                                </div>
+                                <div class="fanli-tag">
+                                    <a href="#" target="_blank"></a>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <a href="#" target="_blank" title="百度糯米" class="nav-block">
+                                    <img src="/images/9483.png"/>
+                                    <span class="nav-txt">百度糯米</span>
+                                </a>
+
+                                <div class="rebate">
+                                    <a href="#" target="_blank">最高返利3.54%</a>
+                                </div>
+                                <div class="fanli-tag">
+                                    <a href="#" target="_blank"></a>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <a href="#" target="_blank" title="百度糯米" class="nav-block">
+                                    <img src="/images/9483.png"/>
+                                    <span class="nav-txt">百度糯米</span>
+                                </a>
+
+                                <div class="rebate">
+                                    <a href="#" target="_blank">最高返利3.54%</a>
+                                </div>
+                                <div class="fanli-tag">
+                                    <a href="#" target="_blank"></a>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <a href="#" target="_blank" title="百度糯米" class="nav-block">
+                                    <img src="/images/9483.png"/>
+                                    <span class="nav-txt">百度糯米</span>
+                                </a>
+
+                                <div class="rebate">
+                                    <a href="#" target="_blank">最高返利3.54%</a>
+                                </div>
+                                <div class="fanli-tag">
+                                    <a href="#" target="_blank"></a>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <a href="#" target="_blank" title="百度糯米" class="nav-block">
+                                    <img src="/images/9483.png"/>
+                                    <span class="nav-txt">百度糯米</span>
+                                </a>
+
+                                <div class="rebate">
+                                    <a href="#" target="_blank">最高返利3.54%</a>
+                                </div>
+                                <div class="fanli-tag">
+                                    <a href="#" target="_blank"></a>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <a href="#" target="_blank" title="百度糯米" class="nav-block">
+                                    <img src="/images/9483.png"/>
+                                    <span class="nav-txt">百度糯米</span>
+                                </a>
+
+                                <div class="rebate">
+                                    <a href="#" target="_blank">最高返利3.54%</a>
+                                </div>
+                                <div class="fanli-tag">
+                                    <a href="#" target="_blank"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--选项卡四：视频-->
+                    <div id="s_content_4" class="s-content">
+                        <div class="s-video-wrapper clearfix">
+                            <div class="video-col fl">
+                                <div class="video-item video-item-1">
+                                    <div class="v-pic v-pic-1">
+                                        <a class="pic" href="#" target="_blank" title="美猴王">
+                                            <img class="img" src="/images/monkey.jpg"/>
+                                        </a>
+                                    </div>
+                                    <div class="v-txt">
+                                        <div class="text">
+                                            <a href="#" target="_blank">美猴王</a>
+                                        </div>
+                                        <div class="score">
+                                            <span class="score-star"></span>
+                                            7.5
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="video-col fl">
+                                <div class="video-item video-item-1">
+                                    <div class="v-pic">
+                                        <a class="pic" href="#" target="_blank" title="美猴王">
+                                            <img class="img" src="/images/duobaoxin.jpg"/>
+                                        </a>
+                                    </div>
+                                    <div class="v-txt">
+                                        <div class="text">
+                                            <a href="#" target="_blank">夺宝幸运星第一部</a>
+                                        </div>
+                                        <div class="score">
+                                            <span class="score-star"></span>
+                                            8.8
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="video-col fl">
+                                <div class="video-item video-item-2">
+                                    <div class="v-pic">
+                                        <a class="pic" href="#" target="_blank" title="">
+                                            <img class="img" src="/images/meilidemimi.jpg"/>
+                                        </a>
+                                    </div>
+                                    <div class="v-txt">
+                                        <div class="text">
+                                            <a href="#" target="_blank">《美丽的秘密》美丽被“污”陪睡遭徐若琳怒骂</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="video-item video-item-2">
+                                    <div class="v-pic">
+                                        <a class="pic" href="#" target="_blank" title="">
+                                            <img class="img" src="/images/miyue.jpg"/>
+                                        </a>
+                                    </div>
+                                    <div class="v-txt">
+                                        <div class="text">
+                                            <a href="#" target="_blank">《芈月传奇》台词高能 引发“有人说体</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="video-col fl">
+                                <div class="video-item video-item-2">
+                                    <div class="v-pic">
+                                        <a class="pic" href="#" target="_blank" title="">
+                                            <img class="img" src="/images/xiayouqiaomu.jpg"/>
+                                        </a>
+                                    </div>
+                                    <div class="v-txt">
+                                        <div class="text">
+                                            <a href="#" target="_blank">吴亦凡《夏有乔木》2016上映 郑恺王大陆同站台</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="video-item video-item-2">
+                                    <div class="v-pic">
+                                        <a class="pic" href="#" target="_blank" title="">
+                                            <img class="img" src="/images/jixiantiaozhan.jpg"/>
+                                        </a>
+                                    </div>
+                                    <div class="v-txt">
+                                        <div class="text">
+                                            <a href="#" target="_blank">电影《极限挑战》曝“三精三傻”版预告</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--选项卡5：购物-->
+                    <div id="s_content_5" class="s-content">
+                        <div class="shopping-card-wrapper">
+                            <div class="shopping-card-item">
+                                <div class="shopping-card-imgwrapper">
+                                    <a href="#" class="img">
+                                        <img src="/images/youmizaoxing.jpg">
+                                    </a>
+
+                                    <div class="mask">
+                                        <span class="salenum">已售 44823</span>
+                                    </div>
+                                </div>
+                                <div class="shopping-card-text">
+                                    <a href="#" class="shopping-card-title">佑米造型</a>
+
+                                    <div class="shopping-card-price">
+                                        <span class="price-sign">￥</span>
+                                        <span>88</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shopping-card-item">
+                                <div class="shopping-card-imgwrapper">
+                                    <a href="#" class="img">
+                                        <img src="/images/youmizaoxing.jpg">
+                                    </a>
+
+                                    <div class="mask">
+                                        <span class="salenum">已售 44823</span>
+                                    </div>
+                                </div>
+                                <div class="shopping-card-text">
+                                    <a href="#" class="shopping-card-title">佑米造型</a>
+
+                                    <div class="shopping-card-price">
+                                        <span class="price-sign">￥</span>
+                                        <span>88</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shopping-card-item">
+                                <div class="shopping-card-imgwrapper">
+                                    <a href="#" class="img">
+                                        <img src="/images/youmizaoxing.jpg">
+                                    </a>
+
+                                    <div class="mask">
+                                        <span class="salenum">已售 44823</span>
+                                    </div>
+                                </div>
+                                <div class="shopping-card-text">
+                                    <a href="#" class="shopping-card-title">佑米造型</a>
+
+                                    <div class="shopping-card-price">
+                                        <span class="price-sign">￥</span>
+                                        <span>88</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shopping-card-item">
+                                <div class="shopping-card-imgwrapper">
+                                    <a href="#" class="img">
+                                        <img src="/images/youmizaoxing.jpg">
+                                    </a>
+
+                                    <div class="mask">
+                                        <span class="salenum">已售 44823</span>
+                                    </div>
+                                </div>
+                                <div class="shopping-card-text">
+                                    <a href="#" class="shopping-card-title">佑米造型</a>
+
+                                    <div class="shopping-card-price">
+                                        <span class="price-sign">￥</span>
+                                        <span>88</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shopping-card-item">
+                                <div class="shopping-card-imgwrapper">
+                                    <a href="#" class="img">
+                                        <img src="/images/youmizaoxing.jpg">
+                                    </a>
+
+                                    <div class="mask">
+                                        <span class="salenum">已售 44823</span>
+                                    </div>
+                                </div>
+                                <div class="shopping-card-text">
+                                    <a href="#" class="shopping-card-title">佑米造型</a>
+
+                                    <div class="shopping-card-price">
+                                        <span class="price-sign">￥</span>
+                                        <span>88</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shopping-card-item">
+                                <div class="shopping-card-imgwrapper">
+                                    <a href="#" class="img">
+                                        <img src="/images/youmizaoxing.jpg">
+                                    </a>
+
+                                    <div class="mask">
+                                        <span class="salenum">已售 44823</span>
+                                    </div>
+                                </div>
+                                <div class="shopping-card-text">
+                                    <a href="#" class="shopping-card-title">佑米造型</a>
+
+                                    <div class="shopping-card-price">
+                                        <span class="price-sign">￥</span>
+                                        <span>88</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shopping-card-item">
+                                <div class="shopping-card-imgwrapper">
+                                    <a href="#" class="img">
+                                        <img src="/images/youmizaoxing.jpg">
+                                    </a>
+
+                                    <div class="mask">
+                                        <span class="salenum">已售 44823</span>
+                                    </div>
+                                </div>
+                                <div class="shopping-card-text">
+                                    <a href="#" class="shopping-card-title">佑米造型</a>
+
+                                    <div class="shopping-card-price">
+                                        <span class="price-sign">￥</span>
+                                        <span>88</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shopping-card-item">
+                                <div class="shopping-card-imgwrapper">
+                                    <a href="#" class="img">
+                                        <img src="/images/youmizaoxing.jpg">
+                                    </a>
+
+                                    <div class="mask">
+                                        <span class="salenum">已售 44823</span>
+                                    </div>
+                                </div>
+                                <div class="shopping-card-text">
+                                    <a href="#" class="shopping-card-title">佑米造型</a>
+
+                                    <div class="shopping-card-price">
+                                        <span class="price-sign">￥</span>
+                                        <span>88</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="ftConW">
+            <p class="about">
+                <a id="setf" href="//www.baidu.com/cache/sethelp/help.html" target="_blank">把百度设为主页</a>
+                <a href="http://home.baidu.com" class="ft">关于百度</a>
+                <a href="http://ir.baidu.com" class="ft">About&nbsp;&nbsp;Baidu</a>
+            </p>
+
+            <p class="cp">&copy;2015 Baidu <a href="#">使用百度必读</a>&nbsp;<a href="#"> 意见反馈</a> 030173号<img
+                    src="/images/gs.gif"/></p>
+        </div>
+    </div>
+
+</div>
+
+<!-- <script src="/JS/myjQuery.js"></script> -->
+<script type="text/javascript" src="JS/myjs.js"></script>
+</body>
+</html>

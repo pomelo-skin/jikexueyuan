@@ -1,0 +1,61 @@
+body {
+    background-image: url("../images/bg.jpg");
+    background-size: cover;
+}
+
+div {
+    width: 100px;
+    height: 100px;
+    /*使div水平垂直居中*/
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+/*通过设定margin值，依次调整上下左右方块*/
+#middle {
+    width: 24px;
+    height: 24px;
+    /*z-index: 120;*/
+    /*中间分别向上、向左偏移50px，使div位于页面正中心*/
+    margin: -50px 0 0 -50px;
+
+    border-top: 38px solid #fac1c3;
+    border-left: 38px solid aquamarine;
+    border-bottom: 38px solid #f0ff67;
+    border-right: 38px solid cornflowerblue;
+}
+
+#top {
+    background-color: #fac1c3;
+    margin: -150px 0 0 -50px;
+    /*将右上角设为弧度*/
+    border-radius: 0 90px 0 0;
+    /*兼容主流浏览器的较低版本*/
+    -webkit-box-shadow: 0 -3px 8px 2px gray;
+    -moz-box-shadow:  0 -3px 8px 2px gray;
+}
+
+#left {
+    background-color: aquamarine;
+    margin: -50px 0 0 -150px;
+    border-radius: 90px 0 0 0;
+    -webkit-box-shadow: -3px 0 8px 2px gray;
+    -moz-box-shadow:  -3px 0 8px 2px gray;
+}
+
+#right {
+    background-color: cornflowerblue;
+    margin: -50px 0 0 50px;
+    border-radius: 0 0 90px 0;
+    -webkit-box-shadow: 3px 0 8px 2px gray;
+    -moz-box-shadow:  3px 0 8px 2px gray;
+}
+
+#bottom {
+    background-color: #f0ff67;
+    margin: 50px 0 0 -50px;
+    border-radius: 0 0 0 90px;
+    -webkit-box-shadow: 0 8px 8px gray;
+    -moz-box-shadow: 0 8px 8px gray;
+}

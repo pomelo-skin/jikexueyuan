@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用JS开发简易计算器</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+
+</head>
+<body>
+<!--开发带页面可操作的完整计算器(可计算sin cos等)，根据用户的按钮给出结果，至少要适配到IE+chrome。-->
+<div class="page">
+    <!--输入显示框-->
+    <div class="s-ipt">
+        <input type="text" class="showscreen" id="showscreen">
+    </div>
+    <div class="keyboard-wr clearfix">
+        <!--键盘前三行-->
+        <ul id="keyboard">
+            <li class="changecolor" onclick="changecolor()">换肤</li>
+            <li class="clear" onclick="clearC()">C</li>
+            <li class="operator" onclick="sign('sin')">sin</li>
+            <li class="operator" onclick="sign('cos')">cos</li>
+            <li class="num" onclick="passValue(7)">7</li>
+            <li class="num" onclick="passValue(8)">8</li>
+            <li class="num" onclick="passValue(9)">9</li>
+            <li class="operator" onclick="sign('*')">*</li>
+            <li class="operator" onclick="sign('/')">/</li>
+            <li class="num" onclick="passValue(4)">4</li>
+            <li class="num" onclick="passValue(5)">5</li>
+            <li class="num" onclick="passValue(6)">6</li>
+            <li class="operator" onclick="sign('+')">+</li>
+            <li class="operator" onclick="sign('-')">-</li>
+            <ul class="two">
+                <li class="num" onclick="passValue(1)">1</li>
+                <li class="num" onclick="passValue(2)">2</li>
+                <li class="num" onclick="passValue(3)">3</li>
+                <li class="num zero" onclick="passValue(0)">0</li>
+                <li class="num" onclick="passValue('.')">.</li>
+            </ul>
+        </ul>
+        <!-- =提交按钮-->
+        <input type="button" class="equal" value="=" onclick="d()">
+    </div>
+</div>
+<script src="JS/myjs.js" charset="utf-8"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+html,body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: url("../bg.jpg") top left no-repeat;
+    background-size: cover;
+}
+.page{
+    background-color: rgb(70,130,180);
+    width: 400px;
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 4%;
+    text-align: center;
+}
+.wrapper{
+    padding-top: 25px;
+}
+
+#answer{
+    display: block;
+    color: #96061d;
+    margin-top: 30px;
+}
+.s-wrap{
+    display: -webkit-box;
+    width: 360px;
+    height: 30px;
+    margin: 20px auto;
+}
+#score{
+    display: block;
+    -webkit-box-flex: 1;
+    height: 30px;
+    border-right: 1px solid transparent;
+    text-indent: 10px;
+}
+.s-btn{
+    display: block;
+    width: 80px;
+    height: 36px;
+}

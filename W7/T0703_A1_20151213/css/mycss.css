@@ -1,0 +1,21 @@
+* {
+     margin: 0;
+     padding: 0;
+ }
+#page{
+    position: relative;
+}
+.box {
+    padding: 10px 0 0 10px;
+    float: left;
+}
+
+.pic {
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 0 5px #ccc;
+}
+
+img {
+    width: 165px;
+}
